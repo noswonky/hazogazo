@@ -18,7 +18,7 @@ print "here:$here, this:$this\n";
 
 my @splitpath = split(/\//, $here);
 
-print Dumper(\@splitpath);
+#print Dumper(\@splitpath);
 
 my $thisdir = $splitpath[-1];
 
@@ -98,31 +98,26 @@ for(my $i=0;;$i++) {
             else {
                 # Really do it, but give the user a little more time to abort
                 print "##### Ok, this is for real...\n";
-                sleep(10);
                 print "Here we go...\n";
             }
         }
 
         print "\n\nUploading...\n";
-        my $cmd = "rsync -v -r $file_list chesscat\@hazelbrookobservatory.com:${server_dir}/${subdir}/";
-        print "Cmd: $cmd\n";
+        my $cmd1 = "rsync -v -r index.cgi chesscat\@hazelbrookobservatory.com:${server_dir}/$cgi_script";
+        my $cmd2 = "rsync -v -r $file_list chesscat\@hazelbrookobservatory.com:${server_dir}/${subdir}/";
+
+        print "Cmd: $cmd1\n";
+        print "Cmd: $cmd2\n";
 
         if($opt_dryrun) {
             print "##### DRY RUN #####\n";
         }
         else {
-            system($cmd);
+            sleep(10) if($opt_live);
+            system($cmd1);
+            system($cmd2);
         }
 
-        $cmd = "rsync -v -r index.cgi chesscat\@hazelbrookobservatory.com:${server_dir}/$cgi_script";
-        print "Cmd: $cmd\n";
-
-        if($opt_dryrun) {
-            print "##### DRY RUN #####\n";
-        }
-        else {
-            system($cmd);
-        }
 
         if($subdir eq 'live') {
             print "Exiting\n";
