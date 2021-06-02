@@ -1,19 +1,16 @@
 
-[%# ROOT = "$this_script" %]
-[%# DEFAULT subdir='live' %]
-[%# DEFAULT pg='home' %]
-[%# ARECIBO = 'http://www.hazelbrookobservatory.com/4337arecibo' %]
 
-
+[%# For links with refer to pages within the site, begin the URL with ROOT_SCRIPT %]
 [% ROOT = "/" %]
 [% ROOT_SCRIPT = "/$this_script" %]
-[% HOME = '/' %]
 
 
 [% DEFAULT subdir='live' %]
 [% DEFAULT pg='home' %]
 
+[%# For template INCLUDES, begin the path with TPL %]
 [% TPL = "./$subdir/tpl" %]
+[%# For image tags, begin the src URL with IMG %]
 [% IMG = "/$subdir/img" %]
 
 
