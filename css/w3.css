@@ -237,4 +237,4 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 
 .w3-dark-blue,.w3-hover-dark-blue:hover{color:#ddd!important;background-color:#003!important}
 .w3-sidebar-right{height:100%;width:200px;background-color:#fff;position:fixed!important;z-index:1;overflow:auto}
-.w3-card-ondark{box-shadow:3px 3px 5px 7px rgba(255,255,255,0.10)}
+.w3-card-ondark{box-shadow:3px 3px 5px 7px rgba(255,255,255,0.20)}

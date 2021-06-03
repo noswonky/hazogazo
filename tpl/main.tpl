@@ -19,10 +19,35 @@
     [% HL_HOME = 'w3-grey' %]
     [% include_tpl =  "$TPL/home.tpl" %]
 
+[% ELSIF pg == 'obs' %]
+
+    [% HL_OBS = 'w3-grey' %]
+    [% include_tpl =  "$TPL/obs.tpl" %]
+
+[% ELSIF pg == 'obs_build' %]
+
+    [% HL_OBS = 'w3-grey' %]
+    [% include_tpl =  "$TPL/obs_build.tpl" %]
+
+[% ELSIF pg == 'obs_tour' %]
+
+    [% HL_OBS = 'w3-grey' %]
+    [% include_tpl =  "$TPL/obs_tour.tpl" %]
+
+[% ELSIF pg == 'obs_equip' %]
+
+    [% HL_OBS = 'w3-grey' %]
+    [% include_tpl =  "$TPL/obs_equip.tpl" %]
+
 [% ELSIF pg == 'occultations' %]
 
     [% HL_OCCULTATIONS = 'w3-grey' %]
     [% include_tpl =  "$TPL/occultations.tpl" %]
+
+[% ELSIF pg == 'videos' %]
+
+    [% HL_VIDEOS = 'w3-grey' %]
+    [% include_tpl =  "$TPL/videos.tpl" %]
 
 [% ELSIF pg == 'contact' %]
 
@@ -58,7 +83,9 @@
 <div class="w3-bar w3-blue">
   <a href="javascript:void(0)" class="w3-bar-item w3-button w3-left w3-hide-large w3-hide-medium" onclick="myFunction()">&#9776;</a>
   <a href="[%ROOT_SCRIPT%]" class="w3-bar-item w3-button [%HL_HOME%]">Home</a>
+  <a href="[%ROOT_SCRIPT%]?pg=obs" class="w3-bar-item w3-button w3-hide-small [%HL_OBS%]">Observatory</a>
   <a href="[%ROOT_SCRIPT%]?pg=occultations" class="w3-bar-item w3-button w3-hide-small [%HL_OCCULTATIONS%]">Occultations</a>
+  <a href="[%ROOT_SCRIPT%]?pg=videos" class="w3-bar-item w3-button w3-hide-small [%HL_VIDEOS%]">Videos</a>
   <a href="[%ROOT_SCRIPT%]?pg=contact" class="w3-bar-item w3-button w3-hide-small [%HL_CONTACT%]">Contact</a>
 </div>
 
@@ -82,7 +109,11 @@
 
         <div class="w3-col l2 m2 w3-hide-small" style="padding-top:10px; padding-right:10px;">
 
-            <a class="twitter-timeline" data-theme="dark" href="https://twitter.com/WonkyAstronomer/lists/astronews?ref_src=twsrc%5Etfw">A Twitter List by WonkyAstronomer</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <a class="twitter-timeline" data-width="250" data-height="1200" data-theme="dark" href="https://twitter.com/TheHazoGazo/lists/1400437010670657539?ref_src=twsrc%5Etfw">A Twitter List by TheHazoGazo</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+            [%# <a class="twitter-timeline" data-theme="dark" href="https://twitter.com/WonkyAstronomer/lists/astronews?ref_src=twsrc%5Etfw">A Twitter List by WonkyAstronomer</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            %]
 
 
         </div>

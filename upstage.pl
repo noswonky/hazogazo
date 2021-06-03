@@ -104,7 +104,7 @@ for(my $i=0;;$i++) {
 
         print "\n\nUploading...\n";
         my $cmd1 = "rsync -v -r index.cgi chesscat\@hazelbrookobservatory.com:${server_dir}/$cgi_script";
-        my $cmd2 = "rsync -v -r $file_list chesscat\@hazelbrookobservatory.com:${server_dir}/${subdir}/";
+        my $cmd2 = "rsync -v -r --delete $file_list chesscat\@hazelbrookobservatory.com:${server_dir}/${subdir}/";
 
         print "Cmd: $cmd1\n";
         print "Cmd: $cmd2\n";
@@ -116,6 +116,7 @@ for(my $i=0;;$i++) {
             sleep(10) if($opt_live);
             system($cmd1);
             system($cmd2);
+            print ">" x 150, "\n";
         }
 
 
