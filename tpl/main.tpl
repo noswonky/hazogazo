@@ -14,6 +14,22 @@
 [% IMG = "/$subdir/img" %]
 
 
+[% IF pg == 'home' %]
+
+    [% HL_HOME = 'w3-grey' %]
+    [% include_tpl =  "$TPL/home.tpl" %]
+
+[% ELSIF pg == 'occultations' %]
+
+    [% HL_OCCULTATIONS = 'w3-grey' %]
+    [% include_tpl =  "$TPL/occultations.tpl" %]
+
+[% ELSIF pg == 'contact' %]
+
+    [% HL_CONTACT = 'w3-grey' %]
+    [% include_tpl =  "$TPL/contact.tpl" %]
+
+[% END %]
 
 
 
@@ -41,9 +57,9 @@
 
 <div class="w3-bar w3-blue">
   <a href="javascript:void(0)" class="w3-bar-item w3-button w3-left w3-hide-large w3-hide-medium" onclick="myFunction()">&#9776;</a>
-  <a href="[%ROOT_SCRIPT%]" class="w3-bar-item w3-button">Home</a>
-  <a href="[%ROOT_SCRIPT%]?pg=occultations" class="w3-bar-item w3-button w3-hide-small">Occultations</a>
-  <a href="[%ROOT_SCRIPT%]?pg=contact" class="w3-bar-item w3-button w3-hide-small">Contact</a>
+  <a href="[%ROOT_SCRIPT%]" class="w3-bar-item w3-button [%HL_HOME%]">Home</a>
+  <a href="[%ROOT_SCRIPT%]?pg=occultations" class="w3-bar-item w3-button w3-hide-small [%HL_OCCULTATIONS%]">Occultations</a>
+  <a href="[%ROOT_SCRIPT%]?pg=contact" class="w3-bar-item w3-button w3-hide-small [%HL_CONTACT%]">Contact</a>
 </div>
 
 <div id="demo" class="w3-bar-block w3-red w3-hide w3-hide-large w3-hide-medium">
@@ -60,15 +76,7 @@
 
         <div class="w3-col l10 m10 s12">
 
-        [% IF pg == 'home' %]
-            [% INCLUDE "$TPL/home.tpl" %]
-        [% ELSIF pg == 'occultations' %]
-            [% INCLUDE "$TPL/occultations.tpl" %]
-        [% ELSIF pg == 'contact' %]
-            [% INCLUDE "$TPL/contact.tpl" %]
-        [% ELSIF pg == 'arecibo' %]
-            [% INCLUDE "$TPL/arecibo.tpl" %]
-        [% END %]
+            [% INCLUDE "$include_tpl" %]
 
         </div>
 
