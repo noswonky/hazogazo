@@ -12,6 +12,7 @@ use CGI;
 use CGI::Carp qw(fatalsToBrowser);
 use Data::Dumper;
 use Template;
+use Template::Plugin::Math;
 
 my $subdir = 'live';
 my $this_script = $0;

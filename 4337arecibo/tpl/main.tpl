@@ -16,14 +16,30 @@
 [% IMG = "$ROOT/$subdir/img" %]
 
 
+[% HL_STYLE = "background-color:#33F;" %]
 
+[% DEFAULT include_tpl = "$TPL/arecibo-overview.tpl" %]
 
 [% IF pg == 'overview' %]
-    [% HL_OVERVIEW = 'w3-grey' %]
+
+    [% HL_OVERVIEW = "$HL_STYLE" %]
+    [% include_tpl = "$TPL/arecibo-overview.tpl" %]
+
 [% ELSIF pg == 'observations' %]
-    [% HL_OBSERVATIONS = 'w3-grey' %]
+
+    [% HL_OBSERVATIONS = "$HL_STYLE" %]
+    [% include_tpl = "$TPL/arecibo-observations.tpl" %]
+
 [% ELSIF pg == 'campaigns' %]
-    [% HL_CAMPAIGNS = 'w3-grey' %]
+
+    [% HL_CAMPAIGNS = "$HL_STYLE" %]
+    [% include_tpl = "$TPL/arecibo-campaigns.tpl" %]
+
+[% ELSIF pg == 'publications' %]
+
+    [% HL_PUBLICATIONS = "$HL_STYLE" %]
+    [% include_tpl = "$TPL/arecibo-publications.tpl" %]
+
 [% END %]
 
 <!DOCTYPE html>
@@ -47,18 +63,18 @@
 <div class="w3-bar w3-blue">
   <a href="javascript:void(0)" class="w3-bar-item w3-button w3-left w3-hide-large w3-hide-medium" onclick="myFunction()">&#9776;</a>
   <a href="[% HOME %]" class="w3-bar-item w3-button">Observatory Home</a>
-  <a href="[% ROOT_SCRIPT %]" class="w3-bar-item w3-button w3-hide-small [% HL_OVERVIEW %]">Overview</a>
-  <a href="[% ROOT_SCRIPT %]?pg=observations" class="w3-bar-item w3-button w3-hide-small [% HL_OBSERVATIONS %]">Observations</a>
-  <a href="[% ROOT_SCRIPT %]?pg=campaigns" class="w3-bar-item w3-button w3-hide-small [% HL_CAMPAIGNS %]">Campaigns</a>
-  <a href="[% ROOT_SCRIPT %]?pg=publications" class="w3-bar-item w3-button w3-hide-small [% HL_PUBLICATIONS %]">Publications</a>
+  <a href="[% ROOT_SCRIPT %]" class="w3-bar-item w3-button w3-hide-small" style="[% HL_OVERVIEW %]">Overview</a>
+  <a href="[% ROOT_SCRIPT %]?pg=observations" class="w3-bar-item w3-button w3-hide-small" style="[% HL_OBSERVATIONS %]">Observations</a>
+  <a href="[% ROOT_SCRIPT %]?pg=campaigns" class="w3-bar-item w3-button w3-hide-small" style="[% HL_CAMPAIGNS %]">Campaigns</a>
+  <a href="[% ROOT_SCRIPT %]?pg=publications" class="w3-bar-item w3-button w3-hide-small" style="[% HL_PUBLICATIONS %]">Publications</a>
 </div>
 
 <div id="demo" class="w3-bar-block w3-blue w3-hide w3-hide-large w3-hide-medium">
   <a href="[% HOME %]" class="w3-bar-item w3-button">Hazelbrook Home</a>
-  <a href="[% ROOT_SCRIPT %]?pg=overview" class="w3-bar-item w3-button">Overview</a>
-  <a href="[% ROOT_SCRIPT %]?pg=observations" class="w3-bar-item w3-button">Observations</a>
-  <a href="[% ROOT_SCRIPT %]?pg=campaigns" class="w3-bar-item w3-button">Campaigns</a>
-  <a href="[% ROOT_SCRIPT %]?pg=publications" class="w3-bar-item w3-button">Publications</a>
+  <a href="[% ROOT_SCRIPT %]?pg=overview" class="w3-bar-item w3-button" style="[%HL_OVERVIEW%]">Overview</a>
+  <a href="[% ROOT_SCRIPT %]?pg=observations" class="w3-bar-item w3-button" style="[%HL_OBSERVATIONS%]">Observations</a>
+  <a href="[% ROOT_SCRIPT %]?pg=campaigns" class="w3-bar-item w3-button" style="[%HL_CAMPAIGNS%]">Campaigns</a>
+  <a href="[% ROOT_SCRIPT %]?pg=publications" class="w3-bar-item w3-button" style="[%HL_PUBLICATIONS%]">Publications</a>
 </div>
 
 

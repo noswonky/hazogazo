@@ -13,45 +13,46 @@
 [%# For image tags, begin the src URL with IMG %]
 [% IMG = "/$subdir/img" %]
 
+[% HL_STYLE = "background-color:#33F;" %]
 
 [% IF pg == 'home' %]
 
-    [% HL_HOME = 'w3-grey' %]
+    [% HL_HOME = "$HL_STYLE" %]
     [% include_tpl =  "$TPL/home.tpl" %]
 
 [% ELSIF pg == 'obs' %]
 
-    [% HL_OBS = 'w3-grey' %]
+    [% HL_OBS = "$HL_STYLE" %]
     [% include_tpl =  "$TPL/obs.tpl" %]
 
 [% ELSIF pg == 'obs_build' %]
 
-    [% HL_OBS = 'w3-grey' %]
+    [% HL_OBS = "$HL_STYLE" %]
     [% include_tpl =  "$TPL/obs_build.tpl" %]
 
 [% ELSIF pg == 'obs_tour' %]
 
-    [% HL_OBS = 'w3-grey' %]
+    [% HL_OBS = "$HL_STYLE" %]
     [% include_tpl =  "$TPL/obs_tour.tpl" %]
 
 [% ELSIF pg == 'obs_equip' %]
 
-    [% HL_OBS = 'w3-grey' %]
+    [% HL_OBS = "$HL_STYLE" %]
     [% include_tpl =  "$TPL/obs_equip.tpl" %]
 
 [% ELSIF pg == 'occultations' %]
 
-    [% HL_OCCULTATIONS = 'w3-grey' %]
+    [% HL_OCCULTATIONS = "$HL_STYLE" %]
     [% include_tpl =  "$TPL/occultations.tpl" %]
 
 [% ELSIF pg == 'videos' %]
 
-    [% HL_VIDEOS = 'w3-grey' %]
+    [% HL_VIDEOS = "$HL_STYLE" %]
     [% include_tpl =  "$TPL/videos.tpl" %]
 
 [% ELSIF pg == 'contact' %]
 
-    [% HL_CONTACT = 'w3-grey' %]
+    [% HL_CONTACT = "$HL_STYLE" %]
     [% include_tpl =  "$TPL/contact.tpl" %]
 
 [% END %]
@@ -82,16 +83,18 @@
 
 <div class="w3-bar w3-blue">
   <a href="javascript:void(0)" class="w3-bar-item w3-button w3-left w3-hide-large w3-hide-medium" onclick="myFunction()">&#9776;</a>
-  <a href="[%ROOT_SCRIPT%]" class="w3-bar-item w3-button [%HL_HOME%]">Home</a>
-  <a href="[%ROOT_SCRIPT%]?pg=obs" class="w3-bar-item w3-button w3-hide-small [%HL_OBS%]">Observatory</a>
-  <a href="[%ROOT_SCRIPT%]?pg=occultations" class="w3-bar-item w3-button w3-hide-small [%HL_OCCULTATIONS%]">Occultations</a>
-  <a href="[%ROOT_SCRIPT%]?pg=videos" class="w3-bar-item w3-button w3-hide-small [%HL_VIDEOS%]">Videos</a>
-  <a href="[%ROOT_SCRIPT%]?pg=contact" class="w3-bar-item w3-button w3-hide-small [%HL_CONTACT%]">Contact</a>
+  <a href="[%ROOT_SCRIPT%]" class="w3-bar-item w3-button" style="[%HL_HOME%]">Home</a>
+  <a href="[%ROOT_SCRIPT%]?pg=obs" class="w3-bar-item w3-button w3-hide-small" style="[%HL_OBS%]">Observatory</a>
+  <a href="[%ROOT_SCRIPT%]?pg=occultations" class="w3-bar-item w3-button w3-hide-small" style="[%HL_OCCULTATIONS%]">Occultations</a>
+  <a href="[%ROOT_SCRIPT%]?pg=videos" class="w3-bar-item w3-button w3-hide-small" style="[%HL_VIDEOS%]">Videos</a>
+  <a href="[%ROOT_SCRIPT%]?pg=contact" class="w3-bar-item w3-button w3-hide-small" style="[%HL_CONTACT%]">Contact</a>
 </div>
 
-<div id="demo" class="w3-bar-block w3-red w3-hide w3-hide-large w3-hide-medium">
-  <a href="[%ROOT_SCRIPT%]?pg=occultations" class="w3-bar-item w3-button">Occultations</a>
-  <a href="[%ROOT_SCRIPT%]?pg=Contact" class="w3-bar-item w3-button">Contact</a>
+<div id="demo" class="w3-bar-block w3-blue w3-hide w3-hide-large w3-hide-medium">
+  <a href="[%ROOT_SCRIPT%]?pg=obs" class="w3-bar-item w3-button" style="[%HL_OBS%]">Observatory</a>
+  <a href="[%ROOT_SCRIPT%]?pg=occultations" class="w3-bar-item w3-button" style="[%HL_OCCULTATIONS%]">Occultations</a>
+  <a href="[%ROOT_SCRIPT%]?pg=videos" class="w3-bar-item w3-button" style="[%HL_VIDEOS%]">Videos</a>
+  <a href="[%ROOT_SCRIPT%]?pg=contact" class="w3-bar-item w3-button" style="[%HL_CONTACT%]">Contact</a>
 </div>
 
 
