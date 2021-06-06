@@ -6,7 +6,7 @@
  <hr />
  <p />
 
- <img src="./img/2021/2021-05-26-LunarEclipse/eclipse-plane-500-nosworthy.gif" />
+[%# <img src="./img/2021/2021-05-26-LunarEclipse/eclipse-plane-500-nosworthy.gif" /> %]
 
  <p />
 </div>
