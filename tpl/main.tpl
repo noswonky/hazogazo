@@ -87,6 +87,7 @@
   <a href="[%ROOT_SCRIPT%]?pg=obs" class="w3-bar-item w3-button w3-hide-small" style="[%HL_OBS%]">Observatory</a>
   <a href="[%ROOT_SCRIPT%]?pg=occultations" class="w3-bar-item w3-button w3-hide-small" style="[%HL_OCCULTATIONS%]">Occultations</a>
   <a href="[%ROOT_SCRIPT%]?pg=videos" class="w3-bar-item w3-button w3-hide-small" style="[%HL_VIDEOS%]">Videos</a>
+  <a href="/4337arecibo" class="w3-bar-item w3-button w3-hide-small" style="[%HL_ARECIBO%]">Arecibo Campaigns</a>
   <a href="[%ROOT_SCRIPT%]?pg=contact" class="w3-bar-item w3-button w3-hide-small" style="[%HL_CONTACT%]">Contact</a>
 </div>
 
@@ -94,6 +95,7 @@
   <a href="[%ROOT_SCRIPT%]?pg=obs" class="w3-bar-item w3-button" style="[%HL_OBS%]">Observatory</a>
   <a href="[%ROOT_SCRIPT%]?pg=occultations" class="w3-bar-item w3-button" style="[%HL_OCCULTATIONS%]">Occultations</a>
   <a href="[%ROOT_SCRIPT%]?pg=videos" class="w3-bar-item w3-button" style="[%HL_VIDEOS%]">Videos</a>
+  <a href="/4337arecibo" class="w3-bar-item w3-button" style="[%HL_ARECIBO%]">Arecibo Campaigns</a>
   <a href="[%ROOT_SCRIPT%]?pg=contact" class="w3-bar-item w3-button" style="[%HL_CONTACT%]">Contact</a>
 </div>
 
