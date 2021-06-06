@@ -34,6 +34,36 @@
 <hr />
 <p />
 
+<h4>Limiting Magnitudes</h4>
+
+If the observations were the result of one body occulting two components of a
+double star, it would require that one component of the double be brighter than G-band mag. 14.4.
+This possibility can be excluded by confirming that the target star dropped
+below mag. 14.4 during both occultation events.
+
+<p />
+
+We used dim comparison stars in the field of view to measure the limiting magnitudes of
+the recordings.
+<p />
+The limiting magnitudes were 15.4 (Gault) and 15.5 (Nosworthy).
+This confirms that the target star dropped below G-band mag. 14.7 during all four recorded events.
+<p />
+The asteroid was mag. 17.0, well below the limiting magnitude of both recordings.
+
+<p />
+
+
+[% INCLUDE "$TPL/img.tpl" file="$IMG/analysis/DG/limiting-mag-DG.png" w="90%" %]
+
+<p />
+
+[% INCLUDE "$TPL/img.tpl" file="$IMG/analysis/PN/limiting-mag-PN.png" w="90%" %]
+
+<p />
+<hr />
+<p />
+
 </div>
 
 <br />
