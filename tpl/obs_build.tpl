@@ -7,6 +7,12 @@
 
  <p>This page is under construction.</p>
 
+ [% INCLUDE "$TPL/vid_single.tpl" vid_id = "9SjyOad-_KA" %]
+
+
+ [% INCLUDE "$TPL/imgr.tpl" file = "$IMG/2019/build/IMG_7230.jpg" caption = "The dome arrives in a big truck." %]
+
+
 </div>
 
 
