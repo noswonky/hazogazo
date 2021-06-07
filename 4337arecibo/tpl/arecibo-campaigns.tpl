@@ -2,10 +2,16 @@
 <div class="w3-container">
  <h2>Arecibo Campaigns</h2>
 
- Observers are encouraged to observe the events below.
+Observers are encouraged to observe the events below in order to confirm the existence of a sattelite.
+<p />
+
+Please visit the 
+<a href="https://cloud.occultwatcher.net/events/campaign/AreciboMoon">Occult Watcher Cloud Campaign Page</a>
+for a full list of upcoming events for this campaign.
+
  <p />
 
- <h4>Upcoming Event Predictions</h4>
+ <h4>Upcoming Events of Particular Interest</h4>
 
 <ul>
     <li> <a href="#20210609">2021 June 9th</a> </li>
