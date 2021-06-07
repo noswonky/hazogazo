@@ -50,6 +50,11 @@
     [% HL_VIDEOS = "$HL_STYLE" %]
     [% include_tpl =  "$TPL/videos.tpl" %]
 
+[% ELSIF pg == 'news' %]
+
+    [% HL_NEWS = "$HL_STYLE" %]
+    [% include_tpl =  "$TPL/news.tpl" %]
+
 [% ELSIF pg == 'contact' %]
 
     [% HL_CONTACT = "$HL_STYLE" %]
@@ -74,12 +79,7 @@
 <!-- Start Content -->
 <div id="main" class="w3-content w3-dark-blue">
 
-<map name="bannermap">
-    <area shape="rect" coords="0,0,50,50" alt="Arecibo" href="/4337arecibo">
-</map>
-
-
-<img src="[% IMG %]/hazogazo-banner-2.jpg" style="width:100%" usemap="#bannermap">
+<img src="[% IMG %]/hazogazo-banner-2.jpg" style="width:100%">
 
 <div class="w3-bar w3-blue">
   <a href="javascript:void(0)" class="w3-bar-item w3-button w3-left w3-hide-large w3-hide-medium" onclick="myFunction()">&#9776;</a>
@@ -87,7 +87,12 @@
   <a href="[%ROOT_SCRIPT%]?pg=obs" class="w3-bar-item w3-button w3-hide-small" style="[%HL_OBS%]">Observatory</a>
   <a href="[%ROOT_SCRIPT%]?pg=occultations" class="w3-bar-item w3-button w3-hide-small" style="[%HL_OCCULTATIONS%]">Occultations</a>
   <a href="[%ROOT_SCRIPT%]?pg=videos" class="w3-bar-item w3-button w3-hide-small" style="[%HL_VIDEOS%]">Videos</a>
-  <a href="/4337arecibo" class="w3-bar-item w3-button w3-hide-small" style="[%HL_ARECIBO%]">Arecibo Campaigns</a>
+    [% IF subdir == 'live' %]
+        <a href="/4337arecibo" class="w3-bar-item w3-button w3-hide-small" style="[%HL_ARECIBO%]">Arecibo Campaigns</a>
+    [% ELSE %]
+        <a href="/4337arecibo/stage.cgi" class="w3-bar-item w3-button w3-hide-small" style="[%HL_ARECIBO%]">Arecibo Campaigns</a>
+    [% END %]
+  <a href="[%ROOT_SCRIPT%]?pg=news" class="w3-bar-item w3-button w3-hide-small" style="[%HL_NEWS%]">News</a>
   <a href="[%ROOT_SCRIPT%]?pg=contact" class="w3-bar-item w3-button w3-hide-small" style="[%HL_CONTACT%]">Contact</a>
 </div>
 
@@ -103,7 +108,6 @@
 <div class="w3-container">
 
     <!-- div class="w3-cell" style="vertical-align:top;">
-    -->
     <div class="w3-row">
 
         <div class="w3-col l10 m10 s12">
@@ -116,14 +120,10 @@
 
             <a class="twitter-timeline" data-width="250" data-height="1200" data-theme="dark" href="https://twitter.com/TheHazoGazo/lists/1400437010670657539?ref_src=twsrc%5Etfw">A Twitter List by TheHazoGazo</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-
-            [%# <a class="twitter-timeline" data-theme="dark" href="https://twitter.com/WonkyAstronomer/lists/astronews?ref_src=twsrc%5Etfw">A Twitter List by WonkyAstronomer</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-            %]
-
-
         </div>
-    </div>
+    -->
 
+            [% INCLUDE "$include_tpl" %]
 
 
 </div>

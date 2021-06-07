@@ -1,6 +1,10 @@
 
 <div class="w3-container">
-<h1>Arecibo Observations</h1>
+<h2>Arecibo Observations</h2>
+
+Below are the results of the observations made on May 19th 2021
+by Dave Gault and Peter Nosworthy. These were the first known
+detections of the suspected satellite of (4337) Arecibo.
 
 
 <h4>Light Curves</h4>

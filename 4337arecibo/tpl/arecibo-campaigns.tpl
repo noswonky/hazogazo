@@ -1,7 +1,9 @@
 
 <div class="w3-container">
- <h1>Arecibo Campaigns</h1>
+ <h2>Arecibo Campaigns</h2>
 
+ Observers are encouraged to observe the events below.
+ <p />
 
  <h4>Upcoming Event Predictions</h4>
 
