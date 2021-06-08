@@ -1,8 +1,8 @@
 
 <div class="w3-container">
- <h1>Occultations</h1>
+ <h2>Occultations</h2>
 
- <p>This page is under construction.</p>
+ <p>The occultations page is under construction.</p>
 
 </div>
 
