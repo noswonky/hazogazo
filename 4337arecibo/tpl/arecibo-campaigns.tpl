@@ -1,5 +1,8 @@
 
-[% region_list = [
+[% region_list = data.region_list %]
+[% event_list = data.event_list %]
+
+[% Xregion_list = [
         'North America',
         'South America',
         'East Asia',
@@ -7,7 +10,7 @@
     ]
 %]
 
-[% event_list = [
+[% Xevent_list = [
         {
             date_fmt => 'June 9, 2021',
             OWC_id   => '159-4337-250638-646390-G24747',
@@ -37,13 +40,25 @@
 <div class="w3-container">
 <h2 id="top">Arecibo Campaigns</h2>
 
-<!--
 Regions:
-[% FOREACH region IN region_list %]
+    [% IF ! region %]
+        <h5 style="display:inline; padding:3px 10px; color:#FFF; background-color:#33F;">All</h5>
+    [% ELSE %]
+        <h5 style="display:inline; padding:3px 10px; color:white;"><a href="[%ROOT_SCRIPT%]?pg=campaigns">All</a></h5>
+    [% END %]
+[% FOREACH region_name IN region_list %]
+    <!--
     <a href="[%ROOT_SCRIPT%]?pg=campaigns&region=[% region %]">[% region %]</a> &nbsp;
+    -->
+
+    [% IF region == region_name %]
+        <h5 style="display:inline; padding:3px 10px; color:#FFF; background-color:#33F;">[% region_name %]</h5>
+    [% ELSE %]
+        <h5 style="display:inline; padding:3px 10px; color:white;"><a href="[%ROOT_SCRIPT%]?pg=campaigns&region=[%region_name%]">[% region_name %]</a></h5>
+    [% END %]
 [% END %]
+
 <p />
--->
 
 Observers are encouraged to observe the events below in order to confirm the existence of a satellite.
 Please visit the 
@@ -60,11 +75,11 @@ for a full list of upcoming events for this campaign.
     [% IF "$event.date_fmt" %]
         <li> <a href="#[% event.OWC_id %]">[% event.date_fmt %]</a>
             in
-            [% FOREACH region IN event.regions %]
-                [% IF region != event.regions.last %]
-                    [% region %],&nbsp;
+            [% FOREACH region_name IN event.regions %]
+                [% IF region_name != event.regions.last %]
+                    [% region_name %],&nbsp;
                 [% ELSE %]
-                    [% region %]
+                    [% region_name %]
                 [% END %]
             [% END %]
         </li>
@@ -77,10 +92,14 @@ for a full list of upcoming events for this campaign.
 <hr />
 <p />
 
+Region = [% region %]
+
 
 [% FOREACH event IN event_list %]
 
-    [% INCLUDE "$TPL/arecibo-cam-event.tpl" %]
+    [% IF ! region OR event.in_region %]
+        [% INCLUDE "$TPL/arecibo-cam-event.tpl" %]
+    [% END %]
 
 [% END %]
 
