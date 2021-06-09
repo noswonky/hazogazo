@@ -3,6 +3,7 @@
 [%# For links with refer to pages within the site, begin the URL with ROOT_SCRIPT %]
 [% ROOT = "/" %]
 [% ROOT_SCRIPT = "/$this_script" %]
+    
 
 
 [% DEFAULT subdir='live' %]
