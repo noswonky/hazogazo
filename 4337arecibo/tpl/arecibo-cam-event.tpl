@@ -5,7 +5,13 @@
 
 <div class="w3-container">
 
-<h4 id="[% event.OWC_id %]">[% event.date_fmt %] &nbsp; - &nbsp;
+<h4 id="[% event.OWC_id %]">[% event.date_fmt %]
+                [% IF event.past %]
+                    <span style="color:#F00">(PAST)</span>
+                [% ELSE %]
+                    in <span style="color:#6F0">[% event.time_remaining %]</span>
+                [% END %]
+&nbsp; - &nbsp;
 [% FOREACH region IN event.regions %]
     [% IF region != event.regions.last %]
         [% region %],&nbsp;
@@ -15,7 +21,7 @@
 [% END %]
 </h4>
 
-<a href="https://cloud.occultwatcher.net/event/[% event.OWC_id %]">OWC Event Page</a>
+<a href="https://cloud.occultwatcher.net/event/[% event.OWC_id %]" target="_blank">OWC Event Page</a>
 &nbsp;&nbsp;|&nbsp;&nbsp;
 <a href="#top">Back to top</a>
 <p />
@@ -28,7 +34,8 @@ Locations:
     [% END %]
 [% END %]
 <p />
-<img src="https://www.occultwatcher.net/occ/OccultMap.ashx?id=[% event.OWC_id %]" style="width:90%" />
+[% INCLUDE "$TPL/imgr.tpl" file = "https://www.occultwatcher.net/occ/OccultMap.ashx?id=$event.OWC_id" w = "40%" %] 
+
 
 <p />
 <hr />
