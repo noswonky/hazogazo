@@ -12,6 +12,7 @@ use CGI;
 use CGI::Carp qw(fatalsToBrowser);
 use Data::Dumper;
 use Template;
+use POSIX qw(strftime);
 use Time::Local qw( timelocal timegm );
 
 my $debug = 0;
@@ -28,6 +29,8 @@ my %params = $q->Vars;
 
 my $region_list = [
         'North America',
+        'Europe',
+        'Eastern Europe',
         'Australia/NZ',
         'Pacific',
         'South America',
@@ -38,28 +41,24 @@ my $region_list = [
 
 my $event_list = [
         {
-            date_fmt => 'June 9, 2021',
             time      => '2021-06-09 04:58',
             OWC_id   => '159-4337-250638-646390-G24747',
             countries  => [ 'Benin', 'Bolivia', 'Brazil', 'Chad', 'Ghana', 'Ivory Coast', 'Niger', 'Nigeria', 'Peru', 'Togo' ],
             regions  => [ 'South America', 'Africa' ],
         },
         {
-            date_fmt => 'June 9, 2021',
             time      => '2021-06-09 11:03',
             OWC_id   => '159-4337-250589-646390-U116848',
             countries  => [ 'Japan', 'United States', ],
             regions     => [ 'Asia', 'North America' ],
         },
         {
-            date_fmt => 'June 9, 2021',
             time      => '2021-06-09 11:34',
             OWC_id   => '159-4337-250583-646390-G10648',
             countries  => [ 'Argentina', 'Chile', ],
             regions  => [ 'South America', ],
         },
         {
-            date_fmt  => 'June 9, 2021',
             time      => '2021-06-09 14:24',
             OWC_id    => '159-4337-250561-646390-G05055',
             countries => [ 'China','India','Myanmar','Philippines', ],
@@ -67,7 +66,6 @@ my $event_list = [
         },
 
         {
-            date_fmt  => 'June 9, 2021',
             time      => '2021-06-09 17:57',
             OWC_id    => '159-4337-250532-646390-G57654',
             countries => [ 'Australia','Botswana','Namibia','South Africa','Swaziland', ],
@@ -75,14 +73,12 @@ my $event_list = [
         },
 
         {
-            date_fmt  => 'June 10, 2021',
             time      => '2021-06-10 02:29',
             OWC_id    => '160-4337-250462-646390-U116617',
             countries => [ 'Argentina','Chile','Lesotho','Madagascar','South Africa', ],
             regions   => [ 'South America', 'Africa' ],
         },
         {
-            date_fmt  => 'June 10, 2021',
             time      => '2021-06-10 03:00',
             OWC_id    => '160-4337-250458-646390-U116596',
             countries => [ 'Bolivia','Brazil','Democratic Republic of the Congo','Ethiopia','Peru','Republic of the Congo','Somalia','South Sudan' ],
@@ -90,7 +86,6 @@ my $event_list = [
         },
 
         {
-            date_fmt  => 'June 10, 2021',
             time      => '2021-06-10 06:19',
             OWC_id    => '160-4337-250431-646390-U116522',
             countries => [ 'Cuba','Mexico' ],
@@ -98,14 +93,12 @@ my $event_list = [
         },
 
         {
-            date_fmt  => 'June 10, 2021',
             time      => '2021-06-10 13:51',
             OWC_id    => '160-4337-250369-646390-U116391',
             countries => [ 'Australia', ],
             regions   => [ 'Australia/NZ', ],
         },
         {
-            date_fmt  => 'June 10, 2021',
             time      => '2021-06-10 22:31',
             OWC_id    => '160-4337-250297-646390-G57808',
             countries => [ 'Argentina','Australia','Chile', ],
@@ -113,15 +106,13 @@ my $event_list = [
         },
 
         {
-            date_fmt  => 'June 11, 2021',
-            time      => '2021-06-10 00:45',
+            time      => '2021-06-11 00:45',
             OWC_id    => '161-4337-250279-646390-G53114',
             countries => [ 'Cameroon','Central African Republic','Chad','Eritrea','Ethiopia','Ghana','Ivory Coast','Liberia','Nigeria','Oman','Pakistan','Saudi Arabia','South Sudan','Sudan','The Bahamas','United States of America','Yemen', ],
             regions   => [ 'Africa','Middle East', ],
         },
 
         {
-            date_fmt  => 'June 11, 2021',
             time      => '2021-06-11 08:45',
             OWC_id    => '161-4337-250213-646389-U116102',
             countries => [ 'Canada','United States of America', ],
@@ -130,7 +121,6 @@ my $event_list = [
 
 
         {
-            date_fmt  => 'June 11, 2021',
             time      => '2021-06-11 17:48',
             OWC_id    => '161-4337-250138-646389-U116006',
             countries => [ 'China','India','Iran','Iraq','Laos','Myanmar','Pakistan','Syria','Taiwan','Thailand','Turkey','Vietnam', ],
@@ -138,7 +128,6 @@ my $event_list = [
         },
 
         {
-            date_fmt  => 'June 11, 2021',
             time      => '2021-06-11 18:10',
             OWC_id    => '161-4337-250135-646389-U116003',
             countries => [ 'New Zealand', ],
@@ -146,7 +135,6 @@ my $event_list = [
         },
 
         {
-            date_fmt  => 'June 12, 2021',
             time      => '2021-06-12 02:45',
             OWC_id    => '162-4337-250064-646389-G58323',
             countries => [ 'Argentina','Botswana','Chile','Madagascar','Mozambique','Namibia','South Africa','Zimbabwe', ],
@@ -155,7 +143,6 @@ my $event_list = [
 
 
         {
-            date_fmt  => 'June 12, 2021',
             time      => '2021-06-12 11:04',
             OWC_id    => '162-4337-249994-646389-G40724',
             countries => [ 'Argentina','Chile', ],
@@ -163,7 +150,6 @@ my $event_list = [
         },
 
         {
-            date_fmt  => 'June 12, 2021',
             time      => '2021-06-12 19:39',
             OWC_id    => '162-4337-249923-646389-G22529',
             countries => [ 'Australia','Vanuatu', ],
@@ -172,7 +158,6 @@ my $event_list = [
 
 
         {
-            date_fmt  => 'June 13, 2021',
             time      => '2021-06-13 01:15',
             OWC_id    => '163-4337-249877-646389-U115844',
             countries => [ 'AngolaBrazil','Burundi','Colombia','Democratic Republic of the Congo','Kenya','Somalia','United Republic of Tanzania', ],
@@ -181,23 +166,71 @@ my $event_list = [
 
 
         {
-            date_fmt  => 'June 15, 2021',
             time      => '2021-06-15 03:22',
             OWC_id    => '165-4337-249459-646389-G24244',
             countries => [ 'Benin','Brazil','Chad','Colombia','Egypt','Ghana','Ivory Coast','Liberia','Niger','Nigeria','Sudan','Togo', ],
             regions   => [ 'South America', 'Africa' ],
         },
         {
-            date_fmt  => 'June 15, 2021',
-            time      => '2021-06-15 12:23',
+            time      => '2021-06-15 10:23',
             OWC_id    => '165-4337-249400-646389-G09342',
             countries => [ 'Australia','Bolivia','Brazil','Chile','New Zealand', ],
             regions   => [ 'Australia/NZ', 'South America' ],
         },
 
+        {
+            time      => '2021-06-16 04:37',
+            OWC_id    => '166-4337-249248-646389-G30648',
+            countries => [ 'Cuba','Mexico','Portugal','Spain','United States of America', ],
+            regions   => [ 'North America', 'Europe', ],
+        },
+
+        {
+            time      => '2021-06-24 07:42',
+            OWC_id    => '174-4337-247647-646390-G42942',
+            countries => [ 'Canada','United States of America', ],
+            regions   => [ 'North America', ],
+        },
+
+        {
+            time      => '2021-06-24 19:33',
+            OWC_id    => '174-4337-247553-646390-G18930',
+            countries => [ 'Angola','Botswana','Indonesia','Madagascar','Mozambique','Namibia','Papua New Guinea','Zimbabwe', ],
+            regions   => [ 'Africa','Asia' ],
+        },
+
+        {
+            time      => '2021-06-25 18:47',
+            OWC_id    => '175-4337-247370-646390-U115127',
+            countries => [ 'Australia','Botswana','Namibia','Solomon Islands','South Africa','Swaziland', ],
+            regions   => [ 'Australia/NZ','Africa','Pacific' ],
+        },
+        {
+            time      => '2021-06-25 22:05',
+            OWC_id    => '175-4337-247344-646390-G25613',
+            countries => [ 'Afghanistan','Algeria','China','Egypt','Iran','Kazakhstan','Kuwait','Kyrgyzstan','Libya','Morocco','Saudi Arabia','Tajikistan', ],
+            regions   => [ 'Middle East','Africa', 'Asia'],
+        },
+        {
+            time      => '2021-06-26 11:18',
+            OWC_id    => '176-4337-247241-646391-U116527',
+            countries => [ 'Argentina','Chile','Falkland Islands', ],
+            regions   => [ 'South America', ],
+        },
+        {
+            time      => '2021-06-26 12:29',
+            OWC_id    => '176-4337-247231-646390-G57000',
+            countries => [ 'Cambodia','India','Myanmar','Philippines','Thailand','Vietnam', ],
+            regions   => [ 'Asia', 'South East Asia','Pacific'],
+        },
+        {
+            time      => '2021-06-26 14:27',
+            OWC_id    => '176-4337-247216-646390-U116465',
+            countries => [ 'India','Indonesia','Oman','Papua New Guinea','Saudi Arabia','Sri Lanka', ],
+            regions   => [ 'Middle East','South East Asia', ],
+        },
 #####################################################
         {
-            date_fmt => 'June 30, 2021',
             time     => '2021-06-30 05:55',
             OWC_id   => '180-4337-246553-646392-U113857',
             countries  => [ 'Bermuda', 'Canada', 'Mexico', 'The Bahamas', 'United States', ],
@@ -208,7 +241,6 @@ my $event_list = [
 
 
         {
-            date_fmt  => '',
             time      => '',
             OWC_id    => '',
             countries => [ '', ],
@@ -237,8 +269,8 @@ if($vars->{pg} eq 'campaigns' ) {
         my($YYYY,$MM,$DD,$hh,$mm) = split(/[\s:\-]/, $event->{time});
         $MM--;
         my $event_time_sec = timegm(0,$mm,$hh,$DD,$MM,$YYYY);
-        my $time_fmt = scalar(gmtime($event_time_sec));
-        $event->{time_fmt} = $time_fmt;
+        my @time_fmt = gmtime($event_time_sec);
+        $event->{date_fmt} = strftime("%B %e, %Y", @time_fmt);
 
         if($event_time_sec < $now_sec) {
             $event->{past} = 1;
