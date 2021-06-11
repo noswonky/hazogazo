@@ -13,6 +13,7 @@ table, th, td {
 
 <h3>Detection</h3>
 
+<div class="w3-container" style="max-width:500px; float:left;">
 On May 20th, 2021 (May 19 at 17:58 UT) two observers, Peter
 Nosworthy
 (<a href="http://hazelbrookobservatory.com">Hazelbrook Observatory</a>),
@@ -26,8 +27,24 @@ Both observers reported double occultation events consisting of the
 expected occultation followed about three seconds later by a
 shorter occultation of the target star.
 A possible explanation is that Arecibo is a binary object.
-
 <p />
+<hr />
+<p />
+Update: On June 9 two observers, Richard Nolthenius and Kirk Bender observed
+<a href="https://cloud.occultwatcher.net/event/159-4337-250589-646390-U116848">another occultation</a>
+by (4337) Arecibo from California. Both observers reported seeing two occultation events
+similar to the initial detection. Analysis of these observations is now underway.
+</div>
+
+<div class="w3-container" style="float:left">
+
+    [% INCLUDE "$TPL/img.tpl" file = "$IMG/Curve-Anim-PN-Square-anno.gif" w = "400px" %]
+
+</div>
+
+<div style="clear:both" />
+
+<br />
 <hr />
 <p />
 <h3>Initial Report</h3>
