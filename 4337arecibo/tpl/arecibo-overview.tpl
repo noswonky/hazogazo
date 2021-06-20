@@ -8,12 +8,12 @@ table, th, td {
 </style>
 
 <div class="w3-container">
-<h2>(4337) Arecibo - Overview of Possible Satellite Detection</h2>
+<h2>(4337) Arecibo - Satellite Discovery</h2>
 
 
 <h3>Detection</h3>
 
-<div class="w3-container" style="max-width:500px; float:left;">
+<div class="w3-container" style="float:left;">
 On May 20th, 2021 (May 19 at 17:58 UT) two observers, Peter
 Nosworthy
 (<a href="http://hazelbrookobservatory.com">Hazelbrook Observatory</a>),
@@ -28,17 +28,27 @@ expected occultation followed about three seconds later by a
 shorter occultation of the target star.
 A possible explanation is that Arecibo is a binary object.
 <p />
-<hr />
-<p />
-Update: On June 9 two observers, Richard Nolthenius and Kirk Bender observed
+Then on June 9 2021, two observers in California, Richard Nolthenius and Kirk Bender observed
 <a href="https://cloud.occultwatcher.net/event/159-4337-250589-646390-U116848">another occultation</a>
-by (4337) Arecibo from California. Both observers reported seeing two occultation events
-similar to the initial detection. Analysis of these observations is now underway.
+by (4337) Arecibo. Both observers recorded double occultation events
+similar to the initial detection.
+<p />
+Analysis of these observations indicates the presence of a satellite of (4337) Arecibo.
 </div>
+
+<div style="clear:both" />
+
+<h3>Recordings and Light Curves</h3>
+
 
 <div class="w3-container" style="float:left">
 
-    [% INCLUDE "$TPL/img.tpl" file = "$IMG/Curve-Anim-PN-Square-anno.gif" w = "400px" %]
+    [% INCLUDE "$TPL/img.tpl" file = "$IMG/anim/Curve-Anim-PN.gif" w = "400px" %]
+
+</div>
+<div class="w3-container" style="float:left">
+
+    [% INCLUDE "$TPL/img.tpl" file = "$IMG/anim/Curve-Anim-DG.gif" w = "400px" %]
 
 </div>
 
