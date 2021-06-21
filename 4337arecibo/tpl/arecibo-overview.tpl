@@ -54,12 +54,12 @@ Analysis of these observations indicates the presence of a satellite of (4337) A
 
 <div style="clear:both" />
 
+[%# ##################################################
 <br />
 <hr />
 <p />
 <h3>Initial Report</h3>
 
-[%# ##################################################
 David Gault - 22 Booker Road, Hawkesbury Heights, N.S.W. Australia
 Kuriwa Observatory MPC E28
 longitude 150d 38m 27.9s east, latitude 33d 39m 51.9s south, altitude 286m
@@ -73,7 +73,6 @@ peter@noswonky.com
 affiliations;
 Trans-Tasman Occultation Alliance
 Western Sydney Amateur Astronomy Group
-###################################################### %]
 
 <p />
 David Gault and Peter Nosworthy report possible detection of a 9-km diameter
@@ -141,6 +140,7 @@ long, which is inconsistent with the NEOWISE data.
 
 <p />
 
+###################################################### %]
 
 
 
