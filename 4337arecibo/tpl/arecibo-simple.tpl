@@ -37,12 +37,18 @@ The second disappearance of the star probably means that there is another smalle
 
 <h3>Is it really a discovery?</h3>
 
-We can't be 100% sure that we've discovered a moon until someone else 
-
-We used online forums to ask other amateur astronmers to observe more occultations by this asteroid to confirm our discovery.
+We can't be 100% sure that we've discovered a moon until someone else can make a similar observation to confirm ours.
+We therefore used online forums to ask other amateur astronmers to observe more occultations by this asteroid to try to confirm our discovery.
+<p />
 About three weeks after our observations, two other amateur astonomers in California recorded another occultation as the asteroid moved in front of a different star. They both saw the star disappear twice just like we did.
 <p />
 With four observations on two separate occasions, we can be almost 100% certain that the asteroid Arecibo has a moon.
+
+<h3>What's Next?</h3>
+We have officially announced the discovery through the
+<a href="http://www.cbat.eps.harvard.edu/index.html" target="_blank">Central Bureau for Astronomical Telegrams</a>.
+
+Scientific discoveries like this are normally reported by publishing a paper in a scientific journal.
 
 
 
