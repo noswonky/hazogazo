@@ -3,9 +3,6 @@
 [% ROOT = "/4337arecibo" %]
 [% ROOT_SCRIPT = "/4337arecibo/$this_script" %]
 
-[%# ROOT = "/arecibotest" %]
-[%# ROOT_SCRIPT = "/arecibotest/$this_script" %]
-
 [% HOME = '/' %]
 
 

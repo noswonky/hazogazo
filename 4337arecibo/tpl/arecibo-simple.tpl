@@ -1,13 +1,13 @@
 
-
 <div class="w3-container">
-<h2>Arecibo Moon Discovery - Simple Explanation</h2>
+<h2>Arecibo Moon Discovery - FAQ</h2>
 
 
-<h3>Who Are We?</h3>
+<h4>Who Are We?</h4>
 
 We are Peter Nosworthy and Dave Gault, two amateur astronomers from the Blue Mountains near Sydney Australia. 
-We both have our own backyard observatoryies with large telescopes and we observe asteroid occultations.
+We both have our own backyard observatoryies with large telescopes.
+We observe asteroid asteroid occultations. This is when an asteroid (a large rocks in space) passes in front os a star and blocks the star's light for a few seconds. These observations help us to learn about the sizes, shapes and motion of asteroids.
 
 <div style="clear:both" />
 
@@ -19,11 +19,10 @@ We both have our own backyard observatoryies with large telescopes and we observ
 
 <p />
 
-<h3>What Happened?</h3>
+<h4>What Happened?</h4>
 
-On May 20th, we both watched as an asteroid called Arecibo - a large rock in space - moved in front of a star blocking its light for a few seconds.
+On May 20th, we both watched as an asteroid called Arecibo moved in front of a star blocking its light for a few seconds.
 The asteroid itself was too dim to see, so we could only see the star. It disappeared for about two seconds as we expected. However, about 3 seconds later the star disappeared again for less than a second.
-
 
 <p />
 
@@ -32,26 +31,45 @@ caption = "The video recording of the star disappearing twice and the graph of t
 
 <p />
 
-<h3>What Does it Mean?</h3>
+<h4>What Does it Mean?</h4>
 The second disappearance of the star probably means that there is another smaller object close to the asteroid and moving with it - a 'moon' of the asteroid.
 
-<h3>Is it really a discovery?</h3>
+<h4>Is it really a discovery?</h4>
 
-We can't be 100% sure that we've discovered a moon until someone else can make a similar observation to confirm ours.
+We can't be 100% sure that we've discovered a moon until someone else makes similar observations to confirm that our result was real and not caused by something else - for example a bird flying in front of the telescope.
 We therefore used online forums to ask other amateur astronmers to observe more occultations by this asteroid to try to confirm our discovery.
 <p />
-About three weeks after our observations, two other amateur astonomers in California recorded another occultation as the asteroid moved in front of a different star. They both saw the star disappear twice just like we did.
 <p />
-With four observations on two separate occasions, we can be almost 100% certain that the asteroid Arecibo has a moon.
+About three weeks after our observations, two other amateur astonomers in California, Richard Nolthenius and Kirk Bender, recorded another occultation as the asteroid moved in front of a different star. They both saw the star disappear twice just like we did. This confirms 
+<p />
+With four observations on two separate occasions, we are now sure that the asteroid Arecibo has a moon.
 
-<h3>What's Next?</h3>
+<h4>How Significant is this Dicovery</h4>
+There are currently more than 800,000 known asteroids.
+The first asteroid with a moon (sometimes called a binary asteroid), was discovered in 1993 by the Galileo spacecraft. As of 2021 there are over 400 asteroids which are binary.
+<p />
+This discovery adds to that list, but we believe it is the first asteroid moon discovered by amateurs and the first to be discovered and confirmed entirely by the occultation method.
+
+<h4>What's Next?</h4>
+
 We have officially announced the discovery through the
 <a href="http://www.cbat.eps.harvard.edu/index.html" target="_blank">Central Bureau for Astronomical Telegrams</a>.
+See the
+<a href="[% ROOT_SCRIPT %]?pg=publications">Publications Page</a>.
+<p />
+Next we need to submit a paper, describing our methods and conclusions, to a scientific journal for peer review and publication.
+A paper is now being prepared for submission to <a href="http://www.minorplanet.info/MPB/">The Minor Planet Bulletin</a>.
+<p />
+We will also continue to encourage others to observe future occultaions by the asteroid Arecibo so that we can more accurately measure the size, shape and orbit of its moon.
+<p />
 
-Scientific discoveries like this are normally reported by publishing a paper in a scientific journal.
 
-
-
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 <br />
 <br />
 <br />
