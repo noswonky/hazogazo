@@ -11,9 +11,9 @@ We both have our own backyard observatoryies with large telescopes and we observ
 
 <div style="clear:both" />
 
-[% INCLUDE "$TPL/imgr.tpl" file = "$IMG/Dave_with_12inchLX200_and_moon.jpg" w = "400px" caption = "Dave with his telescope" style = "float:left" %]
+[% INCLUDE "$TPL/imgr.tpl" file = "$IMG/Dave_with_12inchLX200_and_moon.jpg" w = "400px" caption = "Dave Gault" style = "float:left" %]
 
-[% INCLUDE "$TPL/imgr.tpl" file = "$IMG/Peter-with-dome.jpg" w = "400px" caption = "Peter with his observatory" style = "float:left" %]
+[% INCLUDE "$TPL/imgr.tpl" file = "$IMG/peter-with-scope-2.jpg" w = "400px" caption = "Peter Nosworthy" style = "float:left" %]
 
 <div style="clear:both" />
 
