@@ -1,7 +1,8 @@
 
 [% DEFAULT w = "90%" %]
+[% DEFAULT style = "" %]
 
-<div class="w3-container" style="width:[%w%]; border:1px solid #666">
+<div class="w3-container" style="width:[%w%]; border:1px solid #666; [% style %]">
 
     <div>
         <a href="[% file %]" style="font-size:70%">Click for full size</a>

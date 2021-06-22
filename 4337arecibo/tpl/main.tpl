@@ -45,6 +45,11 @@
     [% HL_CONTACT = "$HL_STYLE" %]
     [% include_tpl = "$TPL/arecibo-contact.tpl" %]
 
+[% ELSIF pg == 'simple' %]
+
+    [% HL_SIMPLE = "$HL_STYLE" %]
+    [% include_tpl = "$TPL/arecibo-simple.tpl" %]
+
 [% END %]
 
 <!DOCTYPE html>
