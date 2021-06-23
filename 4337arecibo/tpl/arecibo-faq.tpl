@@ -22,6 +22,19 @@ These observations help us to learn about the sizes, shapes and motion of astero
 
 [% INCLUDE "$TPL/imgr.tpl" file = "$IMG/peter-with-scope-2.jpg" w = "400px" caption = "Peter Nosworthy" style = "float:left" %]
 
+<div style="clear:both" class="vpad" />
+<hr />
+
+<h4>The Observatories</h4>
+
+Dave's observatory is a roll-off-roof type and is called <a href="http://www.kuriwaobservatory.com/" target="_blank">Kuriwa Observatory</a>. It houses a 12-inch telescope. Peter's observatory is a domed type called <a href="/" target="_blank">Hazelbrook Observatory</a> housing an 11-inch telescope.
+
+<div style="clear:both" class="vpad" />
+
+[% INCLUDE "$TPL/imgr.tpl" file = "$IMG/Kuriwa-obs-1.jpg" w = "450" caption = "Dave's Roll-Off-Roof Observatory" style = "float:left" %]
+
+[% INCLUDE "$TPL/imgr.tpl" file = "$IMG/hazogazo-1.jpg" w = "300px" caption = "Peter's Domed Observatory" style = "float:left" %]
+
 <div style="clear:both" />
 
 <p class="vpad"/>
@@ -33,12 +46,16 @@ These observations help us to learn about the sizes, shapes and motion of astero
 At about 4am on May 20th, we both watched as an asteroid called Arecibo moved in front of a star blocking its light for a few seconds.
 The asteroid itself was too dim to see, so we could only see the star. It disappeared for about two seconds as we expected. However, about 3 seconds later the star disappeared again for less than a second.
 
-<p />
 
-[% INCLUDE "$TPL/imgr.tpl" file = "$IMG/anim/Curve-Anim-PN.gif" w = "400px"
+<p />
+<div style="clear:both" />
+
+[% INCLUDE "$TPL/imgr.tpl" file = "$IMG/anim/Curve-Anim-PN.gif" w = "400px" style = "float:left;"
 caption = "Peter's video recording of the star disappearing twice and the graph of the light level of the star. The first disappearance is caused
 by the asteroid and the second by its moon." %]
 
+[% INCLUDE "$TPL/imgr.tpl" file = "$IMG/anim/Curve-Anim-DG.gif" w = "400px" style = "float:left;"
+caption = "Dave's video recording of the star disappearing twice and the graph of the light level of the star." %]
 
 
 <div style="clear:both" />
@@ -61,7 +78,7 @@ With four observations on two separate occasions, we are now sure that the aster
 
 <hr />
 
-<h4>How Significant is this Discovery</h4>
+<h4>How Significant is this Discovery?</h4>
 There are currently more than 800,000 known asteroids.
 The first asteroid with a moon (sometimes called a binary asteroid), was discovered in 1993 by the Galileo spacecraft. As of 2021 there are over 400 asteroids which are known to be binary.
 <p />
