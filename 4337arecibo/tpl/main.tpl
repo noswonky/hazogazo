@@ -1,4 +1,9 @@
 
+<style>
+h4 {
+    font-weight:900;
+}
+</style>
 
 [% ROOT = "/4337arecibo" %]
 [% ROOT_SCRIPT = "/4337arecibo/$this_script" %]
@@ -42,10 +47,10 @@
     [% HL_CONTACT = "$HL_STYLE" %]
     [% include_tpl = "$TPL/arecibo-contact.tpl" %]
 
-[% ELSIF pg == 'simple' %]
+[% ELSIF pg == 'faq' %]
 
-    [% HL_SIMPLE = "$HL_STYLE" %]
-    [% include_tpl = "$TPL/arecibo-simple.tpl" %]
+    [% HL_FAQ = "$HL_STYLE" %]
+    [% include_tpl = "$TPL/arecibo-faq.tpl" %]
 
 [% END %]
 
@@ -73,6 +78,7 @@
   <a href="[% ROOT_SCRIPT %]?pg=observations" class="w3-bar-item w3-button w3-hide-small" style="[% HL_OBSERVATIONS %]">Analysis</a>
   <a href="[% ROOT_SCRIPT %]?pg=campaigns" class="w3-bar-item w3-button w3-hide-small" style="[% HL_CAMPAIGNS %]">Campaigns</a>
   <a href="[% ROOT_SCRIPT %]?pg=publications" class="w3-bar-item w3-button w3-hide-small" style="[% HL_PUBLICATIONS %]">Publications</a>
+  <a href="[% ROOT_SCRIPT %]?pg=faq" class="w3-bar-item w3-button w3-hide-small" style="[% HL_FAQ %]">FAQ</a>
   <a href="[% ROOT_SCRIPT %]?pg=contact" class="w3-bar-item w3-button w3-hide-small" style="[% HL_CONTACT %]">Contact</a>
     [% IF subdir == 'live' %]
         <a href="/" class="w3-bar-item w3-button" style="float:right;">Observatory Home</a>

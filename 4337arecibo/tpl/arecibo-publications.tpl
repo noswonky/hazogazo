@@ -24,13 +24,18 @@ background-color: #ccc;
 <div class="w3-container">
  <h2>Arecibo Publications</h2>
 
+The discovery was announced via the 
+<a href="http://www.cbat.eps.harvard.edu/index.html" target="_blank">Central Bureau for Astronomical Telegrams</a>
+on June 20, 2021 as 
+<a href="http://www.cbat.eps.harvard.edu/iau/cbet/004900/CBET004981.txt" target="_blank">Electronic Telegram No 4981</a>.<br />
+Note that a subscription is required to access the published document.
 <p />
 
 
 <div style="color:#000; font-weight:500; background-color:#fff; padding:10px;">
 [% INCLUDE "$TPL/imgn.tpl" file = "$IMG/publications/cbat-banner-3.png" link = "http://www.cbat.eps.harvard.edu/index.html" w = "70%" %]
 <pre>
-The discovery was published on June 20, 2021 as <a href="http://www.cbat.eps.harvard.edu/iau/cbet/004900/CBET004981.txt" target="_blank">CBET 4981 : 20210620 : (4337) ARECIBO</a>
+<a href="http://www.cbat.eps.harvard.edu/iau/cbet/004900/CBET004981.txt" target="_blank">CBET 4981 : 20210620 : (4337) ARECIBO</a>
 Electronic Telegram No. 4981
 <a href="http://www.cbat.eps.harvard.edu/index.html" target="_blank">Central Bureau for Astronomical Telegrams</a>
 Mailing address:  Hoffman Lab 209; Harvard University;
@@ -41,6 +46,8 @@ Prepared using the Tamkin Foundation Computer Network
 </pre>
 </div>
 
+<p />
+Below is the text of the report submitted for publication. 
 <p />
 
 <div style="color:#000; font-weight:500; background-color:#fff; padding:10px;">
