@@ -92,6 +92,7 @@ h4 {
   <a href="[% ROOT_SCRIPT %]?pg=observations" class="w3-bar-item w3-button" style="[%HL_OBSERVATIONS%]">Analysis</a>
   <a href="[% ROOT_SCRIPT %]?pg=campaigns" class="w3-bar-item w3-button" style="[%HL_CAMPAIGNS%]">Campaigns</a>
   <a href="[% ROOT_SCRIPT %]?pg=publications" class="w3-bar-item w3-button" style="[%HL_PUBLICATIONS%]">Publications</a>
+  <a href="[% ROOT_SCRIPT %]?pg=faq" class="w3-bar-item w3-button" style="[%HL_FAQ%]">FAQ</a>
   <a href="[% ROOT_SCRIPT %]?pg=contact" class="w3-bar-item w3-button" style="[%HL_CONTACT%]">Contact</a>
     [% IF subdir == 'live' %]
         <a href="/" class="w3-bar-item w3-button">Observatory Home</a>

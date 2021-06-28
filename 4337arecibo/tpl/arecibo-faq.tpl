@@ -5,13 +5,12 @@
 </style>
 
 <div class="w3-container">
-<h2>Arecibo Moon Discovery - FAQ</h2>
+<h2>Arecibo Moon Discovery - The Plain Language FAQ</h2>
 
 
 <h4>Who Are We?</h4>
 
 We are Peter Nosworthy and Dave Gault, two amateur astronomers from the Blue Mountains near Sydney Australia. 
-We both have our own backyard observatories with large telescopes.
 We mainly use our telescopes observe asteroid asteroid occultations. This is when an asteroid (a large rock in space)
 passes in front of a star and blocks the star's light for a few seconds.
 These observations help us to learn about the sizes, shapes and motion of asteroids.
@@ -23,11 +22,9 @@ These observations help us to learn about the sizes, shapes and motion of astero
 [% INCLUDE "$TPL/imgr.tpl" file = "$IMG/peter-with-scope-2.jpg" w = "400px" caption = "Peter Nosworthy" style = "float:left" %]
 
 <div style="clear:both" class="vpad" />
-<hr />
 
-<h4>The Observatories</h4>
-
-Dave's observatory is a roll-off-roof type and is called <a href="http://www.kuriwaobservatory.com/" target="_blank">Kuriwa Observatory</a>. It houses a 12-inch telescope. Peter's observatory is a domed type called <a href="/" target="_blank">Hazelbrook Observatory</a> housing an 11-inch telescope.
+We both have our own backyard observatories with large telescopes.
+Dave's observatory is a roll-off-roof type located at Hawkesbury Heights and is called <a href="http://www.kuriwaobservatory.com/" target="_blank">Kuriwa Observatory</a>. It houses a 12-inch telescope. Peter's observatory is a domed type called <a href="/" target="_blank">Hazelbrook Observatory</a> housing an 11-inch telescope.
 
 <div style="clear:both" class="vpad" />
 
@@ -62,7 +59,7 @@ caption = "Dave's video recording of the star disappearing twice and the graph o
 <hr />
 
 <h4>What Does it Mean?</h4>
-The second disappearance of the star probably means that there is another smaller object close to the asteroid and moving with it - a 'moon' of the asteroid.
+The second disappearance of the star probably means that there is another smaller object close to the asteroid and moving with it. That could only be  a 'moon' of the asteroid.
 
 <hr />
 
@@ -72,9 +69,14 @@ We can't be 100% sure that we've discovered a moon until someone else makes simi
 We therefore used online forums to ask other amateur astronomers to observe more occultations by this asteroid to try to confirm our discovery.
 <p />
 <p />
-About three weeks after our observations, two other amateur astonomers in California, Richard Nolthenius and Kirk Bender, recorded another occultation as the asteroid moved in front of a different star. They both saw the star disappear twice just like we did. This confirms 
+About three weeks after our observations, two other amateur astonomers in California, Richard Nolthenius and Kirk Bender, recorded another occultation as the asteroid moved in front of a different star. They both saw the star disappear twice just like we did. This confirms that the smaller object is real.
+With four observations on two separate occasions, we can now be almost certain that the asteroid Arecibo really does have a moon.
 <p />
-With four observations on two separate occasions, we are now sure that the asteroid Arecibo has a moon.
+
+<hr />
+
+<h4>How big are they?</h4>
+The observations made in California gave a good measurement of the sizes of both objects. The size of the asteroid is about 24km and the moon is about 13km across.
 
 <hr />
 

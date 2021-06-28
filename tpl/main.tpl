@@ -89,9 +89,9 @@
   <a href="[%ROOT_SCRIPT%]?pg=occultations" class="w3-bar-item w3-button w3-hide-small" style="[%HL_OCCULTATIONS%]">Occultations</a>
   <a href="[%ROOT_SCRIPT%]?pg=videos" class="w3-bar-item w3-button w3-hide-small" style="[%HL_VIDEOS%]">Videos</a>
     [% IF subdir == 'live' %]
-        <a href="/4337arecibo" class="w3-bar-item w3-button w3-hide-small" style="[%HL_ARECIBO%]">Arecibo Campaigns</a>
+        <a href="/4337arecibo" class="w3-bar-item w3-button w3-hide-small" style="[%HL_ARECIBO%]">Arecibo Discovery</a>
     [% ELSE %]
-        <a href="/4337arecibo/stage.cgi" class="w3-bar-item w3-button w3-hide-small" style="[%HL_ARECIBO%]">Arecibo Campaigns</a>
+        <a href="/4337arecibo/stage.cgi" class="w3-bar-item w3-button w3-hide-small" style="[%HL_ARECIBO%]">Arecibo Discovery</a>
     [% END %]
   <a href="[%ROOT_SCRIPT%]?pg=news" class="w3-bar-item w3-button w3-hide-small" style="[%HL_NEWS%]">News</a>
   <a href="[%ROOT_SCRIPT%]?pg=contact" class="w3-bar-item w3-button w3-hide-small" style="[%HL_CONTACT%]">Contact</a>
@@ -101,7 +101,7 @@
   <a href="[%ROOT_SCRIPT%]?pg=obs" class="w3-bar-item w3-button" style="[%HL_OBS%]">Observatory</a>
   <a href="[%ROOT_SCRIPT%]?pg=occultations" class="w3-bar-item w3-button" style="[%HL_OCCULTATIONS%]">Occultations</a>
   <a href="[%ROOT_SCRIPT%]?pg=videos" class="w3-bar-item w3-button" style="[%HL_VIDEOS%]">Videos</a>
-  <a href="/4337arecibo" class="w3-bar-item w3-button" style="[%HL_ARECIBO%]">Arecibo Campaigns</a>
+  <a href="/4337arecibo" class="w3-bar-item w3-button" style="[%HL_ARECIBO%]">Arecibo Discovery</a>
   <a href="[%ROOT_SCRIPT%]?pg=contact" class="w3-bar-item w3-button" style="[%HL_CONTACT%]">Contact</a>
 </div>
 
