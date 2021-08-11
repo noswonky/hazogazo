@@ -8,7 +8,7 @@
    ]
 %]
 
-[% INCLUDE "$TPL/navbar.tpl" %]
+[% INCLUDE "$TG/navbar.tpl" %]
 
 
 

@@ -1,9 +1,4 @@
 
-<style>
-h4 {
-    font-weight:900;
-}
-</style>
 
 [% ROOT = "/4337arecibo" %]
 [% ROOT_SCRIPT = "/4337arecibo/$this_script" %]
@@ -15,6 +10,7 @@ h4 {
 [% DEFAULT pg='overview' %]
 
 [% TPL = "./$subdir/tpl" %]
+[% TG = "./$subdir/tg" %]    [%# Generic Templates %]
 [% IMG = "$ROOT/$subdir/img" %]
 
 
@@ -42,6 +38,11 @@ h4 {
     [% HL_PUBLICATIONS = "$HL_STYLE" %]
     [% include_tpl = "$TPL/arecibo-publications.tpl" %]
 
+[% ELSIF pg == 'videos' %]
+
+    [% HL_VIDEOS = "$HL_STYLE" %]
+    [% include_tpl = "$TPL/arecibo-videos.tpl" %]
+
 [% ELSIF pg == 'contact' %]
 
     [% HL_CONTACT = "$HL_STYLE" %]
@@ -61,9 +62,31 @@ h4 {
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <!-- link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" -->
 <link rel="stylesheet" href="../css/w3.css">
-<style>
-</style>
 <script src="https://www.w3schools.com/lib/w3.js"></script>
+
+<style>
+
+h2 {
+    color:#ff9;
+    font-weight:900;
+    font-size:28;
+}
+h3 {
+    color:#ff9;
+    font-weight:900;
+    font-size:22px;
+    font-style:italic;
+}
+h4 {
+    color:#ff6;
+    font-weight:900;
+    font-size:18px;
+    font-style:italic;
+    Xtext-decoration:underline;
+}
+
+</style>
+
 <body class='w3-black'>
 
 <!-- Start Content -->
@@ -78,6 +101,7 @@ h4 {
   <a href="[% ROOT_SCRIPT %]?pg=observations" class="w3-bar-item w3-button w3-hide-small" style="[% HL_OBSERVATIONS %]">Analysis</a>
   <a href="[% ROOT_SCRIPT %]?pg=campaigns" class="w3-bar-item w3-button w3-hide-small" style="[% HL_CAMPAIGNS %]">Campaigns</a>
   <a href="[% ROOT_SCRIPT %]?pg=publications" class="w3-bar-item w3-button w3-hide-small" style="[% HL_PUBLICATIONS %]">Publications</a>
+  <a href="[% ROOT_SCRIPT %]?pg=videos" class="w3-bar-item w3-button w3-hide-small" style="[% HL_VIDEOS %]">Videos</a>
   <a href="[% ROOT_SCRIPT %]?pg=faq" class="w3-bar-item w3-button w3-hide-small" style="[% HL_FAQ %]">FAQ</a>
   <a href="[% ROOT_SCRIPT %]?pg=contact" class="w3-bar-item w3-button w3-hide-small" style="[% HL_CONTACT %]">Contact</a>
     [% IF subdir == 'live' %]

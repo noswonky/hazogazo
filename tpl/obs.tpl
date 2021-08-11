@@ -1,14 +1,24 @@
-[% INCLUDE "$TPL/obs_navbar.tpl" %]
 
 <div class="w3-container">
-<h1>The Observatory</h1>
+<h2>The Observatory</h2>
+
+[% tab_list = [
+    { t => 'obs_build',  title => 'Build'  },
+    { t => 'obs_tour',   title => 'Video Tour'  },
+    { t => 'obs_equip',   title => 'Equipment'  },
+   ]
+%]
+[% DEFAULT t = 'obs_build' %]
+[% INCLUDE "$TG/navbar2.tpl" %]
+
+<p />
 
 
-[% INCLUDE "$TPL/card.tpl" title="Building the Dome" page_link="obs_build" text="
+[% INCLUDE "$TG/card.tpl" img="2019/build/IMG_8466.jpg" title="Building the Dome" page_link="obs_build" text="
 Building the NexDome observatory.
 " %]
 
-[% INCLUDE "$TPL/card.tpl" title="Observatory Tour" page_link="obs_tour" text="
+[% INCLUDE "$TG/card.tpl" img="card/dome-tour.jpg" title="Observatory Tour" page_link="obs_tour" text="
 Video tour of the completed observatory dome.
 " %]
 

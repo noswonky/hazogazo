@@ -34,7 +34,7 @@ Locations:
     [% END %]
 [% END %]
 <p />
-[% INCLUDE "$TPL/imgr.tpl" file = "https://www.occultwatcher.net/occ/OccultMap.ashx?id=$event.OWC_id" w = "40%" %] 
+[% INCLUDE "$TG/imgr.tpl" file = "https://www.occultwatcher.net/occ/OccultMap.ashx?id=$event.OWC_id" w = "40%" %] 
 
 
 <p />

@@ -1,6 +1,5 @@
 
 <div class="w3-container">
- <h1>Videos</h1>
 
 
 [% DEFAULT VID_DATA = {
@@ -128,7 +127,6 @@ iframe.vid_frame {
         [% IF vid.type == 'heading' %]
 
             <p style='clear:both' />
-            <hr />
 
             <h3>[% vid.text %]</h3>
             <p />

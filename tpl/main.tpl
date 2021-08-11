@@ -11,6 +11,7 @@
 
 [%# For template INCLUDES, begin the path with TPL %]
 [% TPL = "./$subdir/tpl" %]
+[% TG = "./$subdir/tg" %]
 [%# For image tags, begin the src URL with IMG %]
 [% IMG = "/$subdir/img" %]
 
@@ -72,8 +73,30 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <!-- link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" -->
 <link rel="stylesheet" href="/[%subdir%]/css/w3.css">
+
 <style>
+
+h2 {
+    color:#ff9;
+    font-weight:900;
+    font-size:28;
+}
+h3 {
+    color:#ff9;
+    font-weight:900;
+    font-size:22px;
+    font-style:italic;
+}
+h4 {
+    color:#ff6;
+    font-weight:900;
+    font-size:18px;
+    font-style:italic;
+    Xtext-decoration:underline;
+}
+
 </style>
+
 <script src="https://www.w3schools.com/lib/w3.js"></script>
 <body class='w3-black'>
 

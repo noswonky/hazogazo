@@ -1,6 +1,6 @@
 
 <div class="w3-container">
- <h1>Contact</h1>
+ <h2>Contact</h2>
 
  <p>This page is under construction.</p>
 

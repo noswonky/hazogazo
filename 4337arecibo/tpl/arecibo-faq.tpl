@@ -17,9 +17,9 @@ These observations help us to learn about the sizes, shapes and motion of astero
 
 <div style="clear:both" class="vpad" />
 
-[% INCLUDE "$TPL/imgr.tpl" file = "$IMG/Dave_with_12inchLX200_and_moon.jpg" w = "400px" caption = "Dave Gault" style = "float:left" %]
+[% INCLUDE "$TG/imgr.tpl" file = "$IMG/Dave_with_12inchLX200_and_moon.jpg" w = "400px" caption = "Dave Gault" style = "float:left" %]
 
-[% INCLUDE "$TPL/imgr.tpl" file = "$IMG/peter-with-scope-2.jpg" w = "400px" caption = "Peter Nosworthy" style = "float:left" %]
+[% INCLUDE "$TG/imgr.tpl" file = "$IMG/peter-with-scope-2.jpg" w = "400px" caption = "Peter Nosworthy" style = "float:left" %]
 
 <div style="clear:both" class="vpad" />
 
@@ -28,9 +28,9 @@ Dave's observatory is a roll-off-roof type located at Hawkesbury Heights and is 
 
 <div style="clear:both" class="vpad" />
 
-[% INCLUDE "$TPL/imgr.tpl" file = "$IMG/Kuriwa-obs-1.jpg" w = "450" caption = "Dave's Roll-Off-Roof Observatory" style = "float:left" %]
+[% INCLUDE "$TG/imgr.tpl" file = "$IMG/Kuriwa-obs-1.jpg" w = "450px" caption = "Dave's Roll-Off-Roof Observatory" style = "float:left" %]
 
-[% INCLUDE "$TPL/imgr.tpl" file = "$IMG/hazogazo-1.jpg" w = "300px" caption = "Peter's Domed Observatory" style = "float:left" %]
+[% INCLUDE "$TG/imgr.tpl" file = "$IMG/hazogazo-1.jpg" w = "300px" caption = "Peter's Domed Observatory" style = "float:left" %]
 
 <div style="clear:both" />
 
@@ -47,11 +47,11 @@ The asteroid itself was too dim to see, so we could only see the star. It disapp
 <p />
 <div style="clear:both" />
 
-[% INCLUDE "$TPL/imgr.tpl" file = "$IMG/anim/Curve-Anim-PN.gif" w = "400px" style = "float:left;"
+[% INCLUDE "$TG/imgr.tpl" file = "$IMG/anim/Curve-Anim-PN.gif" w = "400px" style = "float:left;"
 caption = "Peter's video recording of the star disappearing twice and the graph of the light level of the star. The first disappearance is caused
 by the asteroid and the second by its moon." %]
 
-[% INCLUDE "$TPL/imgr.tpl" file = "$IMG/anim/Curve-Anim-DG.gif" w = "400px" style = "float:left;"
+[% INCLUDE "$TG/imgr.tpl" file = "$IMG/anim/Curve-Anim-DG.gif" w = "400px" style = "float:left;"
 caption = "Dave's video recording of the star disappearing twice and the graph of the light level of the star." %]
 
 
@@ -59,21 +59,49 @@ caption = "Dave's video recording of the star disappearing twice and the graph o
 <hr />
 
 <h4>What Does it Mean?</h4>
-The second disappearance of the star probably means that there is another smaller object close to the asteroid and moving with it. That could only be  a 'moon' of the asteroid.
+The second disappearance of the star probably means that there is another smaller object
+close to the asteroid and moving with it. That could only be  a 'moon' of the asteroid.
+The animation below shows how the star would be hidden by the asteroid and then the moon
+and how the light from the star would drop to zero as each object hides it.
+<p />
+[% INCLUDE "$TG/imgn.tpl" file = "$IMG/anim/moon-scenario.gif" style = "float:left" %]
 
+
+
+<div style="clear:both" />
+<p />
 <hr />
+<p />
 
 <h4>Is it Really a Discovery?</h4>
 
-We can't be 100% sure that we've discovered a moon until someone else makes similar observations to confirm that our result was real and not caused by something else - for example a bird flying in front of the telescope.
-We therefore used online forums to ask other amateur astronomers to observe more occultations by this asteroid to try to confirm our discovery.
+We can't be 100% sure that we've discovered a moon until someone else makes similar
+observations to confirm that our result was real and not caused by something
+else - for example a bird flying in front of the telescope.
+We therefore used online forums to ask other amateur astronomers to observe
+more occultations by this asteroid to try to confirm our discovery.
 <p />
 <p />
-About three weeks after our observations, two other amateur astonomers in California, Richard Nolthenius and Kirk Bender, recorded another occultation as the asteroid moved in front of a different star. They both saw the star disappear twice just like we did. This confirms that the smaller object is real.
-With four observations on two separate occasions, we can now be almost certain that the asteroid Arecibo really does have a moon.
+About three weeks after our observations, two other amateur astonomers in California,
+Richard Nolthenius and Kirk Bender, recorded another occultation as the asteroid 
+moved in front of a different star. They both saw the star disappear twice just like we did.
+This confirms that the smaller object is real.
+With four observations on two separate occasions, we can now be almost certain that the
+asteroid Arecibo really does have a moon.
+<p />
+Here are the videos recorded in California by Richard and Kirk.
+Both videos clearly show the star disappearing twice.
 <p />
 
+
+[% INCLUDE "$TG/img.tpl" file = "$IMG/anim/June9-Richard.gif" w = "400px" style = "float:left; margin-right:15px;" %]
+[% INCLUDE "$TG/img.tpl" file = "$IMG/anim/June9-Kirk.gif" w = "400px" style="float:left;" %]
+
+<div style="clear:both" />
+<br />
+<p />
 <hr />
+<p />
 
 <h4>How big are they?</h4>
 The observations made in California gave a good measurement of the sizes of both objects. The size of the asteroid is about 24km and the moon is about 13km across.
@@ -94,11 +122,13 @@ We have officially announced the discovery through the
 <a href="http://www.cbat.eps.harvard.edu/index.html" target="_blank">Central Bureau for Astronomical Telegrams</a>
 (see the <a href="[% ROOT_SCRIPT %]?pg=publications">Publications Page</a>).
 <p />
-Next we need to submit a paper, describing our methods and conclusions, to a scientific journal for peer review and publication.
-A paper is now being prepared for submission to <a href="http://www.minorplanet.info/MPB/">The Minor Planet Bulletin</a>.
+We have also submitted a paper describing our methods and conclusions to the
+<a href="http://www.minorplanet.info/MPB/" target="_blank">The Minor Planet Bulletin</a>. It should be published in early 2022.
 <p />
-We will also continue to encourage others to observe future occultaions by the asteroid Arecibo so that we can more accurately measure the size, shape and orbit of its moon.
+We will also continue to encourage others to observe future occultaions by the asteroid Arecibo
+so that we can more accurately measure the size, shape and orbit of its moon.
 
+<p />
 <hr />
 
 <br />

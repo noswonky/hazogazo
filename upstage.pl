@@ -34,14 +34,23 @@ print "server_dir = $server_dir\n";
 
 my $opt_live = '';
 my $opt_dryrun = '';
+my $opt_save = '';
 GetOptions(
     "live"     => \$opt_live,
     "dryrun"    => \$opt_dryrun,
+    "save"      => \$opt_save,
 );
 
 # The --live option causes it to upload to the live area...
 $subdir = 'live' if $opt_live;
 $cgi_script = 'index.cgi' if $opt_live;
+
+if($opt_save) {
+
+    save_rollback();
+
+    exit;
+}
 
 my %stamps;
 
@@ -54,7 +63,7 @@ my $start_time = time;
 my @files;
 
 # The dirs to check for changes
-my $file_list = 'css img js tpl doc';
+my $file_list = 'css img js tpl tg doc';
 
 for(my $i=0;;$i++) {
 
@@ -67,8 +76,13 @@ for(my $i=0;;$i++) {
         my $age = -M $file;
 
         if($i and ($age != $stamps{$file})) {
-            # File timestamp has changes since the last iteration
+            # File timestamp has changed since the last iteration
             $ood = 1;
+            print "#### Modified: $file\n";
+            if($file =~ /^tg\//) {
+                print "##### Generic template changed #####\n";
+                system("touch 4337arecibo/index.cgi");
+            }
         }
         $stamps{$file} = $age;
     }
@@ -104,7 +118,7 @@ for(my $i=0;;$i++) {
 
         print "\n\nUploading...\n";
         my $cmd1 = "rsync -v -r index.cgi chesscat\@hazelbrookobservatory.com:${server_dir}/$cgi_script";
-        my $cmd2 = "rsync -v -r --delete $file_list chesscat\@hazelbrookobservatory.com:${server_dir}/${subdir}/";
+        my $cmd2 = "rsync -v -r --delete --copy-dirlinks $file_list chesscat\@hazelbrookobservatory.com:${server_dir}/${subdir}/";
 
         print "Cmd: $cmd1\n";
         print "Cmd: $cmd2\n";
@@ -148,6 +162,12 @@ for(my $i=0;;$i++) {
     if($sleeptime < 20) {
         $sleeptime *= 1.05;
     }
+}
+
+
+sub save_rollback {
+
+
 }
 
 

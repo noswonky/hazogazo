@@ -16,9 +16,9 @@ table, th, td {
 <div class="w3-container" style="float:left;">
 On May 20th, 2021 (May 19 at 17:58 UT) two observers, Peter
 Nosworthy
-(<a href="http://hazelbrookobservatory.com">Hazelbrook Observatory</a>),
+(<a href="http://hazelbrookobservatory.com" target="_blank">Hazelbrook Observatory</a>),
 and Dave Gault
-(<a href="http://www.kuriwaobservatory.com/">Kuriwa Observatory</a> MPC E28),
+(<a href="http://www.kuriwaobservatory.com/" target="_blank">Kuriwa Observatory</a> MPC E28),
 observed an occultation of a mag.
 13.6 star by the asteroid (4337) Arecibo.
 Both are located in the Blue Mountains west of Sydney Australia.
@@ -29,26 +29,31 @@ shorter occultation of the target star.
 A possible explanation is that Arecibo is a binary object.
 <p />
 Then on June 9 2021, two observers in California, Richard Nolthenius and Kirk Bender observed
-<a href="https://cloud.occultwatcher.net/event/159-4337-250589-646390-U116848">another occultation</a>
+<a href="https://cloud.occultwatcher.net/event/159-4337-250589-646390-U116848" target="_blank">another occultation</a>
 by (4337) Arecibo. Both observers recorded double occultation events
 similar to the initial detection.
 <p />
-Analysis of these observations indicates the presence of a satellite of (4337) Arecibo.
+Analysis of these observations indicates the presence of a satellite (or 'moon') of (4337) Arecibo.
 </div>
 
 <div style="clear:both" />
 
+<p />
+<hr />
+<p />
+
 <h3>Recordings and Light Curves</h3>
 
+The animation below shows the videos recorded by Dave and Peter, and the corresponding light curves.
+These are sychronised to show the actual time taken by the events. This shows that the shadow passed
+over Dave's site about 2 seconds before it reached Peter's site.
+
+<div style="clear:both" />
+<p />
 
 <div class="w3-container" style="float:left">
 
-    [% INCLUDE "$TPL/img.tpl" file = "$IMG/anim/Curve-Anim-PN.gif" w = "400px" %]
-
-</div>
-<div class="w3-container" style="float:left">
-
-    [% INCLUDE "$TPL/img.tpl" file = "$IMG/anim/Curve-Anim-DG.gif" w = "400px" %]
+    [% INCLUDE "$TG/imgn.tpl" file = "$IMG/anim/Synced-Vid+Curves.gif" %]
 
 </div>
 

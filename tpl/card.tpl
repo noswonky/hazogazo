@@ -6,7 +6,7 @@
     <h3>[% title %]</h3>
     </header>
 
-    <img src="$IMG/[% img %]">
+    <img src="[% IMG %]/[% img %]" width="100%">
 
 
     <div class="w3-container w3-text-white" style="padding:10px;">
