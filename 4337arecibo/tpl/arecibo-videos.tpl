@@ -19,7 +19,12 @@
                 type    => 'heading',
                 text    => 'Videos Relating to the Discovery'
             },
-
+            {
+                type    => 'vid',
+                title   => "We Discovered a Moon",
+                date    => 'August 12 2021',
+                id      => 'w_Cc5Or1FFw',
+            },
             {
                 type    => 'vid',
                 title   => "Discovery of Arecibo Moon - Peter Nosworthy's Presentation to the IOTA Annual Meeting",
@@ -127,14 +132,13 @@ iframe.vid_frame {
 
             <div class='vid_summary' id='summary_[% vid.id %]'>
                 <img class='vid_thumb' onclick="upsize_vid('[% vid.type %]', '[% vid.id %]')" src="https://img.youtube.com/vi/[% vid.thumb_id %]/mqdefault.jpg" />
-                <span class="vid_caption">[% vid.title %]</span>
+                <div class="vid_caption">[% vid.title %]</div>
                 [% IF vid.type == 'list' %]
                     Playlist
                 [% END %]
                 [% IF vid.chan %]
                     by <b>[% vid.chan %]</b>
                 [% END %]
-                <br />
                 <b>[% vid.date %]</b>
                 <br />
                 [% vid.text %]<br />

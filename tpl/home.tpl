@@ -1,6 +1,6 @@
 
 <div class="w3-container">
- <h1>Hazelbrook Observatory</h1>
+ <h2>Hazelbrook Observatory</h2>
  <p>This page is under construction.</p>
 
  <hr />

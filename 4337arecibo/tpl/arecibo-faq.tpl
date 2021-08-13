@@ -5,13 +5,33 @@
 </style>
 
 <div class="w3-container">
-<h2>Arecibo Moon Discovery - The Plain Language FAQ</h2>
+<h2>Arecibo Moon Discovery</h2>
+
+
+<h3>Introduction</h3>
+
+On May 20 2021 two amateur astronomers, Peter Nosworthy and Dave Gault,
+discovered a 'moon' of the asteroid Arecibo.
+Dave and Peter are both are located in the Blue Mountains west of Sydney Australia and made the discovery
+from their back-yard observatories.
+<p />
+Although the Asteroid and its moon can not be seen directly with amateur telescopes, the discovery was made
+by the 'occultation' method - watching the light from a distant star blink out as the asteroid and moon
+moved in front of it.
+<p />
+Below is the plain language FAQ, while other pages on this site contain videos amd more technical information
+relating to the discovery.
+
+<p class="vpad"/>
+<hr />
+
+<h3>The FAQ</h3>
 
 
 <h4>Who Are We?</h4>
 
 We are Peter Nosworthy and Dave Gault, two amateur astronomers from the Blue Mountains near Sydney Australia. 
-We mainly use our telescopes observe asteroid asteroid occultations. This is when an asteroid (a large rock in space)
+We mainly use our telescopes observe asteroid occultations. This is when an asteroid (a large rock in space)
 passes in front of a star and blocks the star's light for a few seconds.
 These observations help us to learn about the sizes, shapes and motion of asteroids.
 
@@ -75,12 +95,11 @@ and how the light from the star would drop to zero as each object hides it.
 
 <h4>Is it Really a Discovery?</h4>
 
-We can't be 100% sure that we've discovered a moon until someone else makes similar
+We could not be 100% sure that we had discovered a moon until someone else could make similar
 observations to confirm that our result was real and not caused by something
 else - for example a bird flying in front of the telescope.
 We therefore used online forums to ask other amateur astronomers to observe
 more occultations by this asteroid to try to confirm our discovery.
-<p />
 <p />
 About three weeks after our observations, two other amateur astonomers in California,
 Richard Nolthenius and Kirk Bender, recorded another occultation as the asteroid 
@@ -104,15 +123,20 @@ Both videos clearly show the star disappearing twice.
 <p />
 
 <h4>How big are they?</h4>
-The observations made in California gave a good measurement of the sizes of both objects. The size of the asteroid is about 24km and the moon is about 13km across.
+We know the distance to the asteroid and how fast it is moving. Therefore,
+the length of time that it hides the star can tell us the size.
+The observations made in California gave a good measurement of the sizes of both objects.
+The asteroid is about 24km across and the moon is about 13km.
 
 <hr />
 
 <h4>How Significant is this Discovery?</h4>
 There are currently more than 800,000 known asteroids.
-The first asteroid with a moon (sometimes called a binary asteroid), was discovered in 1993 by the Galileo spacecraft. As of 2021 there are over 400 asteroids which are known to be binary.
+The first asteroid with a moon (sometimes called a binary asteroid), was discovered in 1993
+by the Galileo spacecraft. As of 2021 there are over 400 asteroids which are known to be binary.
 <p />
-This discovery adds to that list, but we believe it is the first asteroid moon discovered and confirmed by amateurs and the first to be discovered and confirmed entirely by the occultation method.
+This discovery adds to that list, but we believe it is the first asteroid moon discovered
+and confirmed by amateurs and the first to be discovered and confirmed entirely by the occultation method.
 
 <hr />
 

@@ -7,7 +7,7 @@
 
 
 [% DEFAULT subdir='live' %]
-[% DEFAULT pg='home' %]
+[% DEFAULT pg='obs' %]
 
 [%# For template INCLUDES, begin the path with TPL %]
 [% TPL = "./$subdir/tpl" %]
@@ -17,30 +17,12 @@
 
 [% HL_STYLE = "background-color:#33F;" %]
 
-[% IF pg == 'home' %]
+[% DEFAULT include_tpl =  "$TPL/obs.tpl" %]
 
-    [% HL_HOME = "$HL_STYLE" %]
-    [% include_tpl =  "$TPL/home.tpl" %]
-
-[% ELSIF pg == 'obs' %]
+[% IF pg == 'obs' %]
 
     [% HL_OBS = "$HL_STYLE" %]
     [% include_tpl =  "$TPL/obs.tpl" %]
-
-[% ELSIF pg == 'obs_build' %]
-
-    [% HL_OBS = "$HL_STYLE" %]
-    [% include_tpl =  "$TPL/obs_build.tpl" %]
-
-[% ELSIF pg == 'obs_tour' %]
-
-    [% HL_OBS = "$HL_STYLE" %]
-    [% include_tpl =  "$TPL/obs_tour.tpl" %]
-
-[% ELSIF pg == 'obs_equip' %]
-
-    [% HL_OBS = "$HL_STYLE" %]
-    [% include_tpl =  "$TPL/obs_equip.tpl" %]
 
 [% ELSIF pg == 'occultations' %]
 
@@ -98,19 +80,25 @@ h4 {
 </style>
 
 <script src="https://www.w3schools.com/lib/w3.js"></script>
+
 <body class='w3-black'>
 
 <!-- Start Content -->
 <div id="main" class="w3-content w3-dark-blue">
 
-<img src="[% IMG %]/hazogazo-banner-2.jpg" style="width:100%">
+<div style="position:relative; width:100%">
+<img src="[% IMG %]/hazogazo-banner-2.jpg" style="width:100%;">
+    <a href="[%ROOT_SCRIPT%]?pg=contact">
+        <div style="position:absolute; bottom:22px; left:0px;"> <img src="[%IMG%]/social-logos-small.png" width="150px" /></div>
+        <div style="position:absolute; bottom:4px; left:8px;"> @TheHazoGazo </div>
+    </a>
+</div>
 
 <div class="w3-bar w3-blue">
   <a href="javascript:void(0)" class="w3-bar-item w3-button w3-left w3-hide-large w3-hide-medium" onclick="myFunction()">&#9776;</a>
-  <a href="[%ROOT_SCRIPT%]" class="w3-bar-item w3-button" style="[%HL_HOME%]">Home</a>
-  <a href="[%ROOT_SCRIPT%]?pg=obs" class="w3-bar-item w3-button w3-hide-small" style="[%HL_OBS%]">Observatory</a>
-  <a href="[%ROOT_SCRIPT%]?pg=occultations" class="w3-bar-item w3-button w3-hide-small" style="[%HL_OCCULTATIONS%]">Occultations</a>
+  <a href="[%ROOT_SCRIPT%]" class="w3-bar-item w3-button w3-hide-small" style="[%HL_OBS%]">Observatory</a>
   <a href="[%ROOT_SCRIPT%]?pg=videos" class="w3-bar-item w3-button w3-hide-small" style="[%HL_VIDEOS%]">Videos</a>
+  <a href="[%ROOT_SCRIPT%]?pg=occultations" class="w3-bar-item w3-button w3-hide-small" style="[%HL_OCCULTATIONS%]">Occultations</a>
     [% IF subdir == 'live' %]
         <a href="/4337arecibo" class="w3-bar-item w3-button w3-hide-small" style="[%HL_ARECIBO%]">Arecibo Discovery</a>
     [% ELSE %]
@@ -130,6 +118,7 @@ h4 {
 
 
 <div class="w3-container">
+
 
     <!-- div class="w3-cell" style="vertical-align:top;">
     <div class="w3-row">

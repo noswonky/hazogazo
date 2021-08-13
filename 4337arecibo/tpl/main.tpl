@@ -7,7 +7,7 @@
 
 
 [% DEFAULT subdir='live' %]
-[% DEFAULT pg='overview' %]
+[% DEFAULT pg='faq' %]
 
 [% TPL = "./$subdir/tpl" %]
 [% TG = "./$subdir/tg" %]    [%# Generic Templates %]
@@ -16,14 +16,10 @@
 
 [% HL_STYLE = "background-color:#33F;" %]
 
-[% DEFAULT include_tpl = "$TPL/arecibo-overview.tpl" %]
+[% DEFAULT include_tpl = "$TPL/arecibo-faq.tpl" %]
 
-[% IF pg == 'overview' %]
 
-    [% HL_OVERVIEW = "$HL_STYLE" %]
-    [% include_tpl = "$TPL/arecibo-overview.tpl" %]
-
-[% ELSIF pg == 'observations' %]
+[% IF pg == 'observations' %]
 
     [% HL_OBSERVATIONS = "$HL_STYLE" %]
     [% include_tpl = "$TPL/arecibo-observations.tpl" %]
@@ -93,16 +89,21 @@ h4 {
 <div id="main" class="w3-content w3-dark-blue">
  
 
-<img src="[%IMG%]/arecibo-banner.jpg" style="width:100%">
+<div style="position:relative; width:100%">
+<img src="[% IMG %]/arecibo-banner.jpg" style="width:100%;">
+    <a href="[%ROOT_SCRIPT%]?pg=contact">
+        <div style="position:absolute; bottom:22px; right:0px;"> <img src="[%IMG%]/social-logos-small.png" width="150px" /></div>
+        <div style="position:absolute; bottom:4px; right:8px;"> @TheHazoGazo </div>
+    </a>
+</div>
 
 <div class="w3-bar w3-blue">
   <a href="javascript:void(0)" class="w3-bar-item w3-button w3-left w3-hide-large w3-hide-medium" onclick="myFunction()">&#9776;</a>
-  <a href="[% ROOT_SCRIPT %]" class="w3-bar-item w3-button w3-hide-small" style="[% HL_OVERVIEW %]">Discovery</a>
+  <a href="[% ROOT_SCRIPT %]" class="w3-bar-item w3-button w3-hide-small" style="[% HL_FAQ %]">Intro/FAQ</a>
+  <a href="[% ROOT_SCRIPT %]?pg=videos" class="w3-bar-item w3-button w3-hide-small" style="[% HL_VIDEOS %]">Videos</a>
   <a href="[% ROOT_SCRIPT %]?pg=observations" class="w3-bar-item w3-button w3-hide-small" style="[% HL_OBSERVATIONS %]">Analysis</a>
   <a href="[% ROOT_SCRIPT %]?pg=campaigns" class="w3-bar-item w3-button w3-hide-small" style="[% HL_CAMPAIGNS %]">Campaigns</a>
   <a href="[% ROOT_SCRIPT %]?pg=publications" class="w3-bar-item w3-button w3-hide-small" style="[% HL_PUBLICATIONS %]">Publications</a>
-  <a href="[% ROOT_SCRIPT %]?pg=videos" class="w3-bar-item w3-button w3-hide-small" style="[% HL_VIDEOS %]">Videos</a>
-  <a href="[% ROOT_SCRIPT %]?pg=faq" class="w3-bar-item w3-button w3-hide-small" style="[% HL_FAQ %]">FAQ</a>
   <a href="[% ROOT_SCRIPT %]?pg=contact" class="w3-bar-item w3-button w3-hide-small" style="[% HL_CONTACT %]">Contact</a>
     [% IF subdir == 'live' %]
         <a href="/" class="w3-bar-item w3-button" style="float:right;">Observatory Home</a>
@@ -112,11 +113,11 @@ h4 {
 </div>
 
 <div id="demo" class="w3-bar-block w3-blue w3-hide w3-hide-large w3-hide-medium">
-  <a href="[% ROOT_SCRIPT %]?pg=overview" class="w3-bar-item w3-button" style="[%HL_OVERVIEW%]">Discovery</a>
+  <a href="[% ROOT_SCRIPT %]" class="w3-bar-item w3-button" style="[%HL_FAQ%]">Intro/FAQ</a>
+  <a href="[% ROOT_SCRIPT %]?pg=videos" class="w3-bar-item w3-button" style="[%HL_VIDEOS%]">Videos</a>
   <a href="[% ROOT_SCRIPT %]?pg=observations" class="w3-bar-item w3-button" style="[%HL_OBSERVATIONS%]">Analysis</a>
   <a href="[% ROOT_SCRIPT %]?pg=campaigns" class="w3-bar-item w3-button" style="[%HL_CAMPAIGNS%]">Campaigns</a>
   <a href="[% ROOT_SCRIPT %]?pg=publications" class="w3-bar-item w3-button" style="[%HL_PUBLICATIONS%]">Publications</a>
-  <a href="[% ROOT_SCRIPT %]?pg=faq" class="w3-bar-item w3-button" style="[%HL_FAQ%]">FAQ</a>
   <a href="[% ROOT_SCRIPT %]?pg=contact" class="w3-bar-item w3-button" style="[%HL_CONTACT%]">Contact</a>
     [% IF subdir == 'live' %]
         <a href="/" class="w3-bar-item w3-button">Observatory Home</a>
