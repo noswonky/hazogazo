@@ -1,8 +1,3 @@
-<style>
-.vid_caption {
-    font-size:12px;
-}
-</style>
 
 <div class="w3-container">
 
@@ -43,7 +38,7 @@
 
 
 
-<script>
+<!--
 
 var active_frame_id = '';
 
@@ -73,10 +68,14 @@ function upsize_vid(type, id) {
     active_frame_id = id;
 }
 
-</script>
+-->
 
 
 <style>
+
+.vid_caption {
+    font-size:12px;
+}
 
 div.vid_summary {
     display: inline;

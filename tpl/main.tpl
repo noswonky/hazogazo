@@ -14,6 +14,7 @@
 [% TG = "./$subdir/tg" %]
 [%# For image tags, begin the src URL with IMG %]
 [% IMG = "/$subdir/img" %]
+[% JS = "/$subdir/js" %]
 
 [% HL_STYLE = "background-color:#33F;" %]
 
@@ -55,6 +56,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <!-- link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" -->
 <link rel="stylesheet" href="/[%subdir%]/css/w3.css">
+<script type="text/javascript" src="[%JS%]/video-display.js"></script>
 
 <style>
 
@@ -66,15 +68,20 @@ h2 {
 h3 {
     color:#ff9;
     font-weight:900;
-    font-size:22px;
+    font-size:24px;
     font-style:italic;
 }
 h4 {
     color:#ff6;
     font-weight:900;
-    font-size:18px;
+    font-size:20px;
     font-style:italic;
-    Xtext-decoration:underline;
+}
+h5 {
+    color:#fff;
+    font-weight:900;
+    font-size:16px;
+    font-style:italic;
 }
 
 </style>
@@ -99,20 +106,20 @@ h4 {
   <a href="[%ROOT_SCRIPT%]" class="w3-bar-item w3-button w3-hide-small" style="[%HL_OBS%]">Observatory</a>
   <a href="[%ROOT_SCRIPT%]?pg=videos" class="w3-bar-item w3-button w3-hide-small" style="[%HL_VIDEOS%]">Videos</a>
   <a href="[%ROOT_SCRIPT%]?pg=occultations" class="w3-bar-item w3-button w3-hide-small" style="[%HL_OCCULTATIONS%]">Occultations</a>
-    [% IF subdir == 'live' %]
-        <a href="/4337arecibo" class="w3-bar-item w3-button w3-hide-small" style="[%HL_ARECIBO%]">Arecibo Discovery</a>
-    [% ELSE %]
-        <a href="/4337arecibo/stage.cgi" class="w3-bar-item w3-button w3-hide-small" style="[%HL_ARECIBO%]">Arecibo Discovery</a>
-    [% END %]
   <a href="[%ROOT_SCRIPT%]?pg=news" class="w3-bar-item w3-button w3-hide-small" style="[%HL_NEWS%]">News</a>
   <a href="[%ROOT_SCRIPT%]?pg=contact" class="w3-bar-item w3-button w3-hide-small" style="[%HL_CONTACT%]">Contact</a>
+    [% IF subdir == 'live' %]
+        <a href="/4337arecibo" class="w3-bar-item w3-button" style="float:right;">Asteroid Moon Discovery</a>
+    [% ELSE %]
+        <a href="/4337arecibo/stage.cgi" class="w3-bar-item w3-button" style="float:right;">Asteroid Moon Discovery</a>
+    [% END %]
 </div>
 
 <div id="demo" class="w3-bar-block w3-blue w3-hide w3-hide-large w3-hide-medium">
   <a href="[%ROOT_SCRIPT%]?pg=obs" class="w3-bar-item w3-button" style="[%HL_OBS%]">Observatory</a>
-  <a href="[%ROOT_SCRIPT%]?pg=occultations" class="w3-bar-item w3-button" style="[%HL_OCCULTATIONS%]">Occultations</a>
   <a href="[%ROOT_SCRIPT%]?pg=videos" class="w3-bar-item w3-button" style="[%HL_VIDEOS%]">Videos</a>
-  <a href="/4337arecibo" class="w3-bar-item w3-button" style="[%HL_ARECIBO%]">Arecibo Discovery</a>
+  <a href="[%ROOT_SCRIPT%]?pg=occultations" class="w3-bar-item w3-button" style="[%HL_OCCULTATIONS%]">Occultations</a>
+  <a href="/4337arecibo" class="w3-bar-item w3-button" style="[%HL_ARECIBO%]">Moon Discovery</a>
   <a href="[%ROOT_SCRIPT%]?pg=contact" class="w3-bar-item w3-button" style="[%HL_CONTACT%]">Contact</a>
 </div>
 
@@ -120,23 +127,7 @@ h4 {
 <div class="w3-container">
 
 
-    <!-- div class="w3-cell" style="vertical-align:top;">
-    <div class="w3-row">
-
-        <div class="w3-col l10 m10 s12">
-
-            [% INCLUDE "$include_tpl" %]
-
-        </div>
-
-        <div class="w3-col l2 m2 w3-hide-small" style="padding-top:10px; padding-right:10px;">
-
-            <a class="twitter-timeline" data-width="250" data-height="1200" data-theme="dark" href="https://twitter.com/TheHazoGazo/lists/1400437010670657539?ref_src=twsrc%5Etfw">A Twitter List by TheHazoGazo</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-        </div>
-    -->
-
-            [% INCLUDE "$include_tpl" %]
+    [% INCLUDE "$include_tpl" %]
 
 
 </div>

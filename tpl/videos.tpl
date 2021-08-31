@@ -51,7 +51,7 @@
 
 
 
-<script>
+<!--
 
 var active_frame_id = '';
 
@@ -81,8 +81,7 @@ function upsize_vid(type, id) {
     active_frame_id = id;
 }
 
-</script>
-
+-->
 
 <style>
 

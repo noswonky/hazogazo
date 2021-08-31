@@ -18,7 +18,7 @@ use Time::Local qw( timelocal timegm );
 my $debug = 0;
 
 my $subdir = 'live';
-my $this_script = $0;
+my $this_script = $ENV{SCRIPT_NAME};
 
 
 my $cwd = cwd;
@@ -279,6 +279,11 @@ my $event_list = [
 
 my $vars = { %params };
 
+$vars->{cwd} = $cwd;
+$vars->{SCRIPT_NAME} = $ENV{SCRIPT_NAME};
+
+($vars->{arecibo_dir} = $ENV{SCRIPT_NAME}) =~ s/^\/([0-9a-z]+)\/.*/$1/;
+
 $debug && do { $vars->{pg} = 'campaigns' };
 $debug && do { $vars->{region} = '' };
 
@@ -336,7 +341,7 @@ if($this_script =~ /index/) {
     $vars->{subdir} = 'live';
 }
 else {
-    $vars->{this_script} = $this_script;
+    $vars->{this_script} = 'stage.cgi';
     $subdir = 'stage';
     $vars->{subdir} = 'stage';
 }

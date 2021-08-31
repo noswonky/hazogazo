@@ -37,9 +37,9 @@ These observations help us to learn about the sizes, shapes and motion of astero
 
 <div style="clear:both" class="vpad" />
 
-[% INCLUDE "$TG/imgr.tpl" file = "$IMG/Dave_with_12inchLX200_and_moon.jpg" w = "400px" caption = "Dave Gault" style = "float:left" %]
+[% INCLUDE "$TG/imgr.tpl" file = "$IMG/Dave_with_12inchLX200_and_moon.jpg" wl = "400px" caption = "Dave Gault" style = "float:left" %]
 
-[% INCLUDE "$TG/imgr.tpl" file = "$IMG/peter-with-scope-2.jpg" w = "400px" caption = "Peter Nosworthy" style = "float:left" %]
+[% INCLUDE "$TG/imgr.tpl" file = "$IMG/peter-with-scope-2.jpg" wl = "400px" caption = "Peter Nosworthy" style = "float:left" %]
 
 <div style="clear:both" class="vpad" />
 
@@ -48,9 +48,9 @@ Dave's observatory is a roll-off-roof type located at Hawkesbury Heights and is 
 
 <div style="clear:both" class="vpad" />
 
-[% INCLUDE "$TG/imgr.tpl" file = "$IMG/Kuriwa-obs-1.jpg" w = "450px" caption = "Dave's Roll-Off-Roof Observatory" style = "float:left" %]
+[% INCLUDE "$TG/imgr.tpl" file = "$IMG/Kuriwa-obs-1.jpg" wl = "450px" caption = "Dave's Roll-Off-Roof Observatory" style = "float:left" %]
 
-[% INCLUDE "$TG/imgr.tpl" file = "$IMG/hazogazo-1.jpg" w = "300px" caption = "Peter's Domed Observatory" style = "float:left" %]
+[% INCLUDE "$TG/imgr.tpl" file = "$IMG/hazogazo-1.jpg" wl = "400px" caption = "Peter's Domed Observatory" style = "float:left" %]
 
 <div style="clear:both" />
 
@@ -67,11 +67,11 @@ The asteroid itself was too dim to see, so we could only see the star. It disapp
 <p />
 <div style="clear:both" />
 
-[% INCLUDE "$TG/imgr.tpl" file = "$IMG/anim/Curve-Anim-PN.gif" w = "400px" style = "float:left;"
+[% INCLUDE "$TG/imgr.tpl" file = "$IMG/anim/Curve-Anim-PN.gif" wl = "400px" style = "float:left;"
 caption = "Peter's video recording of the star disappearing twice and the graph of the light level of the star. The first disappearance is caused
 by the asteroid and the second by its moon." %]
 
-[% INCLUDE "$TG/imgr.tpl" file = "$IMG/anim/Curve-Anim-DG.gif" w = "400px" style = "float:left;"
+[% INCLUDE "$TG/imgr.tpl" file = "$IMG/anim/Curve-Anim-DG.gif" wl = "400px" style = "float:left;"
 caption = "Dave's video recording of the star disappearing twice and the graph of the light level of the star." %]
 
 
@@ -113,8 +113,8 @@ Both videos clearly show the star disappearing twice.
 <p />
 
 
-[% INCLUDE "$TG/img.tpl" file = "$IMG/anim/June9-Richard.gif" w = "400px" style = "float:left; margin-right:15px;" %]
-[% INCLUDE "$TG/img.tpl" file = "$IMG/anim/June9-Kirk.gif" w = "400px" style="float:left;" %]
+[% INCLUDE "$TG/imgr.tpl" file = "$IMG/anim/June9-Richard.gif" wl = "45%" style = "float:left; margin-right:15px;" %]
+[% INCLUDE "$TG/imgr.tpl" file = "$IMG/anim/June9-Kirk.gif" wl = "45%" style="float:left;" %]
 
 <div style="clear:both" />
 <br />

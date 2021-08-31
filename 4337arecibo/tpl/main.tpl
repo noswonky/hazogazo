@@ -1,7 +1,7 @@
 
 
-[% ROOT = "/4337arecibo" %]
-[% ROOT_SCRIPT = "/4337arecibo/$this_script" %]
+[% ROOT = "/$arecibo_dir" %]
+[% ROOT_SCRIPT = "/$arecibo_dir/$this_script" %]
 
 [% HOME = '/' %]
 
@@ -12,6 +12,7 @@
 [% TPL = "./$subdir/tpl" %]
 [% TG = "./$subdir/tg" %]    [%# Generic Templates %]
 [% IMG = "$ROOT/$subdir/img" %]
+[% JS = "$ROOT/$subdir/js" %]
 
 
 [% HL_STYLE = "background-color:#33F;" %]
@@ -58,7 +59,8 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <!-- link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" -->
 <link rel="stylesheet" href="../css/w3.css">
-<script src="https://www.w3schools.com/lib/w3.js"></script>
+<!-- <script src="https://www.w3schools.com/lib/w3.js"></script> -->
+<script type="text/javascript" src="[%JS%]/video-display.js"></script>
 
 <style>
 
@@ -90,12 +92,18 @@ h4 {
  
 
 <div style="position:relative; width:100%">
-<img src="[% IMG %]/arecibo-banner.jpg" style="width:100%;">
-    <a href="[%ROOT_SCRIPT%]?pg=contact">
-        <div style="position:absolute; bottom:22px; right:0px;"> <img src="[%IMG%]/social-logos-small.png" width="150px" /></div>
+<img src="[% IMG %]/arecibo-banner-2.jpg" style="width:100%;">
+    <Xa href="[%ROOT_SCRIPT%]?pg=contact">
+        <div style="position:absolute; bottom:22px; right:0px;"> <img src="[%IMG%]/social-logos-small.png" width="150px" usemap="#socialmap" /></div>
         <div style="position:absolute; bottom:4px; right:8px;"> @TheHazoGazo </div>
-    </a>
+    </Xa>
 </div>
+
+<map name="socialmap">
+  <area shape="circle" coords="32,28,22" alt="Twitter" href="https://twitter.com/TheHazoGazo">
+  <area shape="circle" coords="79,28,22" alt="Instagram" href="https://www.instagram.com/thehazogazo">
+  <area shape="circle" coords="126,28,22" alt="Facebook" href="https://www.facebook.com/TheHazoGazo">
+</map>
 
 <div class="w3-bar w3-blue">
   <a href="javascript:void(0)" class="w3-bar-item w3-button w3-left w3-hide-large w3-hide-medium" onclick="myFunction()">&#9776;</a>
@@ -131,17 +139,6 @@ h4 {
 
     <div class="w3-cell" style="vertical-align:top;">
 
-    <!--
-        [% IF pg == 'overview' %]
-            [% INCLUDE "$TPL/arecibo-overview.tpl" %]
-        [% ELSIF pg == 'observations' %]
-            [% INCLUDE "$TPL/arecibo-observations.tpl" %]
-        [% ELSIF pg == 'campaigns' %]
-            [% INCLUDE "$TPL/arecibo-campaigns.tpl" %]
-        [% ELSIF pg == 'publications' %]
-            [% INCLUDE "$TPL/arecibo-publications.tpl" %]
-        [% END %]
-    -->
         [% INCLUDE "$include_tpl" %]
 
     </div>
