@@ -9,6 +9,7 @@
 [% DEFAULT subdir='live' %]
 [% DEFAULT pg='faq' %]
 
+[% CSS = "./$subdir/css" %]
 [% TPL = "./$subdir/tpl" %]
 [% TG = "./$subdir/tg" %]    [%# Generic Templates %]
 [% IMG = "$ROOT/$subdir/img" %]
@@ -58,7 +59,7 @@
 <title>Hazelbrrook Observatory</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <!-- link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" -->
-<link rel="stylesheet" href="../css/w3.css">
+<link rel="stylesheet" href="[% CSS %]/w3.css">
 <!-- <script src="https://www.w3schools.com/lib/w3.js"></script> -->
 <script type="text/javascript" src="[%JS%]/video-display.js"></script>
 

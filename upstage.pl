@@ -87,6 +87,10 @@ for(my $i=0;;$i++) {
                 print "##### Generic javascript changed #####\n";
                 system("touch 4337arecibo/index.cgi");
             }
+            if($file =~ /^css\//) {
+                print "##### Generic css changed #####\n";
+                system("touch 4337arecibo/index.cgi");
+            }
         }
         $stamps{$file} = $age;
     }
