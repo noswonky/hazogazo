@@ -7,12 +7,17 @@ function upsize_vid(type, id) {
         document.getElementById('frame_' + active_frame_id).src = '';
         document.getElementById('frame_' + active_frame_id).style.display = 'none';
         document.getElementById('summary_' + active_frame_id).style.display = 'inline';
+        active_frame_id = '';
+        return;
     }
 
     var frame = document.getElementById('frame_' + id);
     var summary = document.getElementById('summary_' + id);
+    // var close = document.getElementById('close_' + id);
     summary.style.display = 'none';
     frame.style.display = 'inline';
+    // close.style.display = 'inline';
+
 
     if(type === 'vid') {
         frame.src = "https://www.youtube.com/embed/" + id + "?vq=hd720&rel=0";
@@ -26,3 +31,4 @@ function upsize_vid(type, id) {
 
     active_frame_id = id;
 }
+

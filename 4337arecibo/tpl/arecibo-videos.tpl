@@ -1,3 +1,6 @@
+[% DEFAULT VID_LAYOUT = 'vertical' %]
+
+[% VID_LAYOUT = 'horizontal' %]
 
 <div class="w3-container">
 
@@ -17,18 +20,29 @@
             {
                 type    => 'vid',
                 title   => "We Discovered a Moon",
+                text    => "A non-technical overview of the discovery by The Wonky Astronomer"
                 date    => 'August 12 2021',
                 id      => 'w_Cc5Or1FFw',
             },
             {
                 type    => 'vid',
-                title   => "Discovery of Arecibo Moon - Peter Nosworthy's Presentation to the IOTA Annual Meeting",
+                title   => "Zoom Presentation - Overview of Occultations and the Moon Discovery",
+                text    => "Peter Nosworthy's Presentation to the Western Sydney Amateur Astronomy Group.
+                            Includes an overview of occultations and how the discovery was made with this technique.",
+                date    => 'August 18 2021',
+                id      => '4IxL4VYD7GQ',
+            },
+            {
+                type    => 'vid',
+                title   => "Zoom Presentation - IOTA Annual Meeting",
+                text    => "Peter Nosworthy's Presentation to the 2021 IOTA Annual Meeting",
                 date    => 'July 17 2021',
                 id      => 'wlqawqOZ7ek',
             },
             {
                 type    => 'vid',
-                title   => "Constraining the Orbit - Richard Nolthenius's Presentation to the IOTA Annual Meeting",
+                title   => "Zoom Presentation - Constraining the Orbit",
+                text    => "Richard Nolthenius's Presentation to the 2021 IOTA Annual Meeting",
                 date    => 'July 17 2021',
                 id      => '6vw5eTKOHgo'
             },
@@ -38,52 +52,36 @@
 
 
 
-<!--
-
-var active_frame_id = '';
-
-function upsize_vid(type, id) {
-
-    if( active_frame_id ) {
-        document.getElementById('frame_' + active_frame_id).src = '';
-        document.getElementById('frame_' + active_frame_id).style.display = 'none';
-        document.getElementById('summary_' + active_frame_id).style.display = 'inline';
-    }
-
-    var frame = document.getElementById('frame_' + id);
-    var summary = document.getElementById('summary_' + id);
-    summary.style.display = 'none';
-    frame.style.display = 'inline';
-
-    if(type === 'vid') {
-        frame.src = "https://www.youtube.com/embed/" + id + "?vq=hd720&rel=0";
-    }
-    else if( type === 'list' ) {
-        frame.src="https://www.youtube.com/embed/videoseries?list=" + id;
-    }
-
-    // frame.src = "https://www.youtube.com/embed/" + vid_id + "?vq=hd720&rel=0";
-    // frame.src="http://img.youtube.com/vi/" + vid_id + "/hqdefault.jpg";
-
-    active_frame_id = id;
-}
-
--->
-
 
 <style>
 
 .vid_caption {
+    font-size:16px;
+    font-weight:bold;
+}
+.vid_date {
     font-size:12px;
+    font-weight:bold;
+}
+.vid_text {
+    font-size:12px;
+    font-weight:normal;
+    vertical-align:top;
+    padding:4px;
 }
 
 div.vid_summary {
     display: inline;
     float: left;
-    width: 200px;
-    height: 200px;
+    [% IF VID_LAYOUT == 'vertical' %]
+        width: 200px;
+    [% ELSE %]
+        width: 400px;
+    [% END %]
+    Xheight: 200px;
     margin: 15px;
-    border: none;
+    padding: 5px;
+    Xborder:solid 1px #666;
 }
 
 img.vid_thumb {
@@ -96,8 +94,23 @@ img.vid_thumb {
 
 iframe.vid_frame {
     display:none;
-    float: left;
+    Xfloat: left;
     border:solid 3px #900;
+    width:1200px;
+    height:686px;
+}
+
+.vid_close {
+    display:none;
+}
+
+.vid_table {
+    border:solid 1px #666;
+    padding:5px;
+}
+
+.vid_anchor {
+    text-decoration:none;
 }
 
 </style>
@@ -112,6 +125,8 @@ iframe.vid_frame {
 [% END %]
 
 [% IF VID_DATA.vid_list.size %]
+
+    <a class='vid_close' id='vid_close' href="#" onclick="upsize_vid()">Close</a>
 
     [% FOR vid IN VID_DATA.vid_list %]
 
@@ -129,20 +144,45 @@ iframe.vid_frame {
                 [% vid.thumb_id = vid.id %]
             [% END %]
 
-            <div class='vid_summary' id='summary_[% vid.id %]'>
-                <img class='vid_thumb' onclick="upsize_vid('[% vid.type %]', '[% vid.id %]')" src="https://img.youtube.com/vi/[% vid.thumb_id %]/mqdefault.jpg" />
-                <div class="vid_caption">[% vid.title %]</div>
-                [% IF vid.type == 'list' %]
-                    Playlist
+                [% IF VID_LAYOUT == 'vertical' %]
+
+                    <div class='vid_summary' id='summary_[% vid.id %]'>
+                        <img class='vid_thumb' onclick="upsize_vid('[% vid.type %]', '[% vid.id %]')" src="https://img.youtube.com/vi/[% vid.thumb_id %]/mqdefault.jpg" />
+                        <div class="vid_caption">[% vid.title %]</div>
+                        [% IF vid.type == 'list' %]
+                            Playlist
+                        [% END %]
+                        [% IF vid.chan %]
+                            by <b>[% vid.chan %]</b>
+                            [% END %]
+                        <div class='vid_date'><i>[% vid.date %]</i></div>
+                        <p />
+                        <div class='vid_text'>[% vid.text %]</div>
+                    </div>
+                    <iframe class='vid_frame' id='frame_[% vid.id %]' src='' allowfullscreen></iframe>
+
+                [% ELSE %]
+
+                    <div class='vid_summary' id='summary_[% vid.id %]'>
+                        <a href="#" class='vid_anchor' onclick="upsize_vid('[% vid.type %]', '[% vid.id %]')" >
+                        <table class='vid_table'>
+                        <tr><td colspan=2> <div class="vid_caption">[% vid.title %]</div></tr>
+                        <tr>
+                            <td>
+                                <img class='vid_thumb' src="https://img.youtube.com/vi/[% vid.thumb_id %]/mqdefault.jpg" />
+                                <div class='vid_date'><i>[% vid.date %]</i></div>
+                            </td>
+
+                            <td valign='top'>
+                                <div class='vid_text'>[% vid.text %]</div>
+                            </td>
+                        </tr>
+                        </table>
+                        </a>
+                    </div>
+                    <iframe class='vid_frame' id='frame_[% vid.id %]' src='' allowfullscreen></iframe>
+
                 [% END %]
-                [% IF vid.chan %]
-                    by <b>[% vid.chan %]</b>
-                [% END %]
-                <b>[% vid.date %]</b>
-                <br />
-                [% vid.text %]<br />
-            </div>
-            <iframe class='vid_frame' id='frame_[% vid.id %]' width="800" height="457" src='' allowfullscreen></iframe>
 
         [% END %]
 
@@ -158,16 +198,15 @@ iframe.vid_frame {
 
 
 
+
+
 </div>
 
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-
-
+<br /> <p />
+<br /> <p />
+<br /> <p />
+<br /> <p />
+<br /> <p />
 
 
 
