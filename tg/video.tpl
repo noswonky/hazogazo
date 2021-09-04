@@ -85,7 +85,6 @@ iframe.vid_frame {
 
 [% IF VID_DATA.vid_list.size %]
 
-    <a class='vid_close' id='vid_close' href="#" onclick="upsize_vid()">Close Video</a>
 
     [% FOR vid IN VID_DATA.vid_list %]
 
