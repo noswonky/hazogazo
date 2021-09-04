@@ -37,9 +37,9 @@ These observations help us to learn about the sizes, shapes and motion of astero
 
 <div style="clear:both" class="vpad" />
 
-[% INCLUDE "$TG/imgr.tpl" file = "$IMG/Dave_with_12inchLX200_and_moon.jpg" wl = "400px" caption = "Dave Gault" style = "float:left" %]
+[% INCLUDE "$TG/imgr.tpl" file = "$IMG/Dave_with_12inchLX200_and_moon.jpg" wl = "45%" caption = "Dave Gault" style = "float:left" %]
 
-[% INCLUDE "$TG/imgr.tpl" file = "$IMG/peter-with-scope-2.jpg" wl = "400px" caption = "Peter Nosworthy" style = "float:left" %]
+[% INCLUDE "$TG/imgr.tpl" file = "$IMG/peter-with-scope-2.jpg" wl = "45%" caption = "Peter Nosworthy" style = "float:left" %]
 
 <div style="clear:both" class="vpad" />
 
@@ -48,9 +48,9 @@ Dave's observatory is a roll-off-roof type located at Hawkesbury Heights and is 
 
 <div style="clear:both" class="vpad" />
 
-[% INCLUDE "$TG/imgr.tpl" file = "$IMG/Kuriwa-obs-1.jpg" wl = "450px" caption = "Dave's Roll-Off-Roof Observatory" style = "float:left" %]
+[% INCLUDE "$TG/imgr.tpl" file = "$IMG/Kuriwa-obs-1.jpg" wl = "45%" caption = "Dave's Roll-Off-Roof Observatory" style = "float:left" %]
 
-[% INCLUDE "$TG/imgr.tpl" file = "$IMG/hazogazo-1.jpg" wl = "400px" caption = "Peter's Domed Observatory" style = "float:left" %]
+[% INCLUDE "$TG/imgr.tpl" file = "$IMG/hazogazo-1.jpg" wl = "40%" caption = "Peter's Domed Observatory" style = "float:left" %]
 
 <div style="clear:both" />
 
@@ -60,8 +60,10 @@ Dave's observatory is a roll-off-roof type located at Hawkesbury Heights and is 
 <h4>What Happened?</h4>
 
 
-At about 4am on May 20th, we both watched as an asteroid called Arecibo moved in front of a star blocking its light for a few seconds.
-The asteroid itself was too dim to see, so we could only see the star. It disappeared for about two seconds as we expected. However, about 3 seconds later the star disappeared again for less than a second.
+At about 4am on May 20th, we both watched as an asteroid called Arecibo moved in front of a dim star, blocking its light for a few seconds.
+The asteroid itself was too dim to see, so we could only see the star.
+It disappeared for about two seconds as we expected.
+However, about 3 seconds later the star disappeared again for less than a second. This was not expected!
 
 
 <p />
@@ -80,7 +82,7 @@ caption = "Dave's video recording of the star disappearing twice and the graph o
 
 <h4>What Does it Mean?</h4>
 The second disappearance of the star probably means that there is another smaller object
-close to the asteroid and moving with it. That could only be  a 'moon' of the asteroid.
+close to the asteroid and moving with it. That could only be a 'moon' in orbit around the asteroid.
 The animation below shows how the star would be hidden by the asteroid and then the moon
 and how the light from the star would drop to zero as each object hides it.
 <p />

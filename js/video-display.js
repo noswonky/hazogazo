@@ -7,15 +7,18 @@ function upsize_vid(type, id) {
         document.getElementById('frame_' + active_frame_id).src = '';
         document.getElementById('frame_' + active_frame_id).style.display = 'none';
         document.getElementById('summary_' + active_frame_id).style.display = 'inline';
+        document.getElementById('vid_close').style.display = 'none';
         active_frame_id = '';
         return;
     }
 
     var frame = document.getElementById('frame_' + id);
     var summary = document.getElementById('summary_' + id);
-    // var close = document.getElementById('close_' + id);
+    var vid_close = document.getElementById('vid_close');
     summary.style.display = 'none';
     frame.style.display = 'inline';
+    vid_close.style.display = 'inline';
+
     // close.style.display = 'inline';
 
 

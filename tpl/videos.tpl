@@ -1,29 +1,15 @@
 
-<div class="w3-container">
-
-
-[% DEFAULT VID_DATA = {
-    vid_list    => [ ],
-    vid_id      => '',
-
-} %]
 
 [% VID_DATA = {
         vid_list    => [
 
             {
-                type    => 'heading',
-                text    => 'Videos by The Wonky Astronomer'
-            },
-
-            {
                 type    => 'vid',
                 title   => 'Asteroid Occultation after Rain and Flood',
+                text    => '',
+                date    => 'September 2015',
                 id      => '5GomhnCALmg',
                 
-                Xchan    => 'ChessNetwork',
-                Xtext    => '',
-                Xdate    => 'September 2015',
             },
             {
                 type    => 'vid',
@@ -50,38 +36,13 @@
 } %]
 
 
+<h2>Videos by The Wonky Astronomer</h2>
+<p style='clear:both' />
 
-<!--
+[% INCLUDE "$TG/video.tpl" %]
 
-var active_frame_id = '';
+[% RETURN %]
 
-function upsize_vid(type, id) {
-
-    if( active_frame_id ) {
-        document.getElementById('frame_' + active_frame_id).src = '';
-        document.getElementById('frame_' + active_frame_id).style.display = 'none';
-        document.getElementById('summary_' + active_frame_id).style.display = 'inline';
-    }
-
-    var frame = document.getElementById('frame_' + id);
-    var summary = document.getElementById('summary_' + id);
-    summary.style.display = 'none';
-    frame.style.display = 'inline';
-
-    if(type === 'vid') {
-        frame.src = "https://www.youtube.com/embed/" + id + "?vq=hd720&rel=0";
-    }
-    else if( type === 'list' ) {
-        frame.src="https://www.youtube.com/embed/videoseries?list=" + id;
-    }
-
-    // frame.src = "https://www.youtube.com/embed/" + vid_id + "?vq=hd720&rel=0";
-    // frame.src="http://img.youtube.com/vi/" + vid_id + "/hqdefault.jpg";
-
-    active_frame_id = id;
-}
-
--->
 
 <style>
 
