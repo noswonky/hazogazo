@@ -138,7 +138,7 @@ iframe.vid_frame {
                         </table>
                         </a>
                     </div>
-                    <iframe class='vid_frame' id='frame_[% vid.id %]' src='' allowfullscreen></iframe>
+                    <iframe class='vid_frame' id='frame_[% vid.id %]' src="https://www.youtube.com/embed/[% vid.id %]?vq=hd720&rel=0" allowfullscreen></iframe>
 
                 [% END %]
 
