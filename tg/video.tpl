@@ -31,12 +31,14 @@ div.vid_summary {
     [% IF VID_DATA.layout == 'vertical' %]
         width: 200px;
     [% ELSE %]
-        width: 400px;
+        height:200px;
+        width: 370px;
     [% END %]
     Xheight: 200px;
-    margin: 15px;
+    margin: 10px;
     padding: 5px;
-    Xborder:solid 1px #666;
+    border:solid 1px #666;
+    overflow: hidden;
 }
 
 img.vid_thumb {
@@ -47,22 +49,48 @@ img.vid_thumb {
     cursor: hand;
 }
 
-iframe.vid_frame {
+Xiframe.vid_frame {
     display:none;
-    Xfloat: left;
-    border:solid 3px #900;
-    width:1200px;
-    height:686px;
+    Xposition:relative;
+    Xtop:10px;
+    Xleft:10px;
+    float:left;
+    border:solid 2px #900;
 }
 
-.vid_close {
-    display:none;
-    font-size:18px;
-    font-weight:bold;
+iframe.vid_frame_large {
+    width:900px;
+    height:515px;
+}
+iframe.vid_frame_medium {
+    width:600px;
+    height:343px;
+}
+iframe.vid_frame_small {
+    width:380px;
+    height:218px;
 }
 
-.vid_table {
-    border:solid 1px #666;
+
+.videoWrapper {
+  position: relative;
+  top:0px;
+  left:0px;
+  Xfloat:left;
+  width:65%;
+  height: 0;
+  padding-bottom: 36.56%; /* 16:9 - Must be the width percentage x 0.5625 */
+}
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.Xvid_table {
+    border:none;
     padding:5px;
 }
 
@@ -75,16 +103,43 @@ iframe.vid_frame {
 
 <div class="w3-container">
 
+
+
 [% IF VID_DATA.vid_id %]
 
-    <iframe class='vid_frame' id='frame_[% vid.id %]' style="display:block" width="800" height="457" src="https://www.youtube.com/embed/[% VID_DATA.vid_id %]?vq=hd720&rel=0" allowfullscreen></iframe>
+    <iframe class='vid_frame' id='frame_[% vid.id %]' src="" allowfullscreen></iframe>
 
     [% RETURN %]
 
 [% END %]
 
+[% FOR vid IN VID_DATA.vid_list %]
+                    [%#
+                        I use three differently sized iframes for responsiveness.
+                        I would rather use a percentage width and tried some code which does that.
+                        It involved putting a wrapper div around the iframe. This worked but had problems
+                        when trying to make it visible via javascript. It would become visible but at
+                        a tiny size.
+                    %]
+
+                    <!--
+                    <iframe class='vid_frame vid_frame_large w3-hide-medium w3-hide-small' id='frame_large_[% vid.id %]' src="https://www.youtube.com/embed/[% vid.id %]?vq=hd720&rel=0" allowfullscreen></iframe>
+                    <iframe class='vid_frame vid_frame_medium w3-hide-large w3-hide-small' id='frame_medium_[% vid.id %]' src="https://www.youtube.com/embed/[% vid.id %]?vq=hd720&rel=0" allowfullscreen></iframe>
+                    <iframe class='vid_frame vid_frame_small w3-hide-large w3-hide-medium' id='frame_small_[% vid.id %]' src="https://www.youtube.com/embed/[% vid.id %]?vq=hd720&rel=0" allowfullscreen></iframe>
+                    -->
+[% END %]
+
+[% DEFAULT first_vid_id = '' %]
+
 [% IF VID_DATA.vid_list.size %]
 
+    [% IF ! first_vid_id %]
+        [% first_vid_id = VID_DATA.vid_list.0.id %]
+    [% END %]
+
+    <div class='videoWrapper'>
+    <iframe class='vid_frame' id='vid_frame' src="https://www.youtube.com/embed/[% first_vid_id %]?vq=hd720&rel=0" allowfullscreen></iframe>
+    </div>
 
     [% FOR vid IN VID_DATA.vid_list %]
 
@@ -122,7 +177,7 @@ iframe.vid_frame {
                 [% ELSE %]
 
                     <div class='vid_summary' id='summary_[% vid.id %]'>
-                        <a href="#" class='vid_anchor' onclick="upsize_vid('[% vid.type %]', '[% vid.id %]')" >
+                        <a href="#heading" class='vid_anchor' onclick="upsize_vid('[% vid.type %]', '[% vid.id %]')" >
                         <table class='vid_table'>
                         <tr><td colspan=2> <div class="vid_title">[% vid.title %]</div></tr>
                         <tr>
@@ -138,7 +193,7 @@ iframe.vid_frame {
                         </table>
                         </a>
                     </div>
-                    <iframe class='vid_frame' id='frame_[% vid.id %]' src="https://www.youtube.com/embed/[% vid.id %]?vq=hd720&rel=0" allowfullscreen></iframe>
+
 
                 [% END %]
 

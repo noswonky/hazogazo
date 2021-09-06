@@ -4,29 +4,28 @@ var active_frame_id = '';
 function upsize_vid(type, id) {
 
     if( active_frame_id ) {
-        //document.getElementById('frame_' + active_frame_id).src = '';
-        document.getElementById('frame_' + active_frame_id).style.display = 'none';
-        document.getElementById('summary_' + active_frame_id).style.display = 'inline';
+        // document.getElementById('frame_' + active_frame_id).src = '';
+        // document.getElementById('frame_large_' + active_frame_id).style.display = 'none';
+        // document.getElementById('frame_medium_' + active_frame_id).style.display = 'none';
+        // document.getElementById('frame_small_' + active_frame_id).style.display = 'none';
         active_frame_id = '';
-        return;
     }
 
-    var frame = document.getElementById('frame_' + id);
-    var summary = document.getElementById('summary_' + id);
-    summary.style.display = 'none';
-    frame.style.display = 'inline';
+    // document.getElementById('frame_' + id).style.display = 'inline';
+    // document.getElementById('frame_large_' + id).style.display = 'inline';
+    // document.getElementById('frame_medium_' + id).style.display = 'inline';
+    // document.getElementById('frame_small_' + id).style.display = 'inline';
 
 
-/*
     if(type === 'vid') {
-        frame.src = "https://www.youtube.com/embed/" + id + "?vq=hd720&rel=0";
+        // frame.src = "https://www.youtube.com/embed/" + id + "?vq=hd720&rel=0";
+        document.getElementById('vid_frame').src = "https://www.youtube.com/embed/" + id + "?vq=hd720&rel=0";
     }
     else if( type === 'list' ) {
-        frame.src="https://www.youtube.com/embed/videoseries?list=" + id;
+        document.getElementById('vid_frame').src = "https://www.youtube.com/embed/videoseries?list=" + id;
     }
-*/
 
 
-    active_frame_id = id;
+    // active_frame_id = id;
 }
 

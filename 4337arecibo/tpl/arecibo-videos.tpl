@@ -38,6 +38,7 @@
 } %]
 
 
+<a id="heading" />
 <h2>Videos Relating to the Discovery</h2>
 <p style='clear:both' />
 
