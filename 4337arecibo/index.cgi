@@ -240,12 +240,12 @@ my $event_list = [
 ##            regions  => [ 'North America' ],
 ##        },
 
-        {
-            time      => '2021-08-21 09:32',
-            OWC_id    => '232-4337-243869-646413-U102353',
-            countries => [ 'New Zealand', ],
-            regions   => [ 'Australia/NZ', ],
-        },
+#        {
+#            time      => '2021-08-21 09:32',
+#            OWC_id    => '232-4337-243869-646413-U102353',
+#            countries => [ 'New Zealand', ],
+#            regions   => [ 'Australia/NZ', ],
+#        },
         {
             time      => '2021-09-04 00:48',
             OWC_id    => '246-4337-245540-646411-U105504',
