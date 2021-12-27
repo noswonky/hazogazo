@@ -26,11 +26,11 @@ background-color: #ccc;
 <h2>Publications Relating to the Discovery</h2>
 
 [% tab_list = [
-    { t => 'pub_cbet',  title => 'CBET'  },
-    { t => 'pub_mpb',   title => 'Minor Planet Bulletin'  },
+    { t => 'pub_mpb',   title => 'Paper for The Minor Planet Bulletin'  },
+    { t => 'pub_cbet',  title => 'CBET (Discovery Announcement)'  },
    ]
 %]
-[% DEFAULT t = 'pub_cbet' %]
+[% DEFAULT t = 'pub_mpb' %]
 [% INCLUDE "$TG/navbar2.tpl" %]
 
 
